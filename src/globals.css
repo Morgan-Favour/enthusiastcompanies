@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-eh-accent: #00a8cf;
+  --color-eh-primary: #006afe;
+  --color-eh-black: #1c1c1c;
+  --color-eh-white: #ffffff;
+  
+}
+
+.space-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
