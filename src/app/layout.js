@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="font-space-grotesk">
+      <body className="font-space-grotesk mx-15">
         {children}
       </body>
     </html>
