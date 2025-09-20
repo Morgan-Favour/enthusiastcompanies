@@ -1,47 +1,94 @@
-import React from 'react'
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from './ui/navigation-menu'
-import Link from 'next/link'
-import Image from 'next/image'
+"use client"
+
+import React, { useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { usePathname } from "next/navigation"
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { Menu } from "lucide-react"
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/impact", label: "Impact" },
+  { href: "/investor-relations", label: "Investor Relations" },
+  { href: "/projects", label: "Projects" },
+]
 
 const Navbar = () => {
-    return (
-        <div className='flex justify-between items-center py-5'>
-            <Image
-                width={100}
-                height={100}
-                src="/plug-logo.svg"
-                alt="Description"
+  const pathname = usePathname()
+  const [open, setOpen] = useState(false)
 
-            />
-            <div>
-                <NavigationMenu>
-                    <NavigationMenuList className="flex gap-10"> 
-                        <NavigationMenuItem>
-                            <Link href="/">Home</Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/about">About</Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/contact">Contact</Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/contact">How It works</Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/contact">Impact</Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/contact">Investot Relations</Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/contact">Projects</Link>
-                        </NavigationMenuItem>
-                    </NavigationMenuList>
-                </NavigationMenu>
-            </div>
-        </div>
-    )
+  const isActive = (href) =>
+    pathname === href
+      ? "text-blue-600 font-semibold underline"
+      : "text-gray-700 hover:text-blue-600"
+
+  return (
+    <header className="flex justify-between items-center py-4 px-6 shadow-sm">
+      {/* Logo */}
+      <Link href="/">
+        <Image
+          width={100}
+          height={100}
+          src="/plug-logo.svg"
+          alt="Logo"
+          priority
+        />
+      </Link>
+
+      {/* Desktop Menu */}
+      <nav className="hidden md:block">
+        <NavigationMenu>
+          <NavigationMenuList className="flex gap-8">
+            {links.map(({ href, label }) => (
+              <NavigationMenuItem key={href}>
+                <Link href={href} className={isActive(href)}>
+                  {label}
+                </Link>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div className="md:hidden">
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <button aria-label="Open menu">
+              <Menu className="h-6 w-6" />
+            </button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-64 pl-10">
+            <nav className="flex flex-col gap-4 mt-8">
+              {links.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className={isActive(href)}
+                  onClick={() => setOpen(false)} // closes sheet after click
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
+  )
 }
 
 export default Navbar

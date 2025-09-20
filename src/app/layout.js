@@ -1,4 +1,6 @@
+import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Enthusiast Hydrogen Company",
@@ -17,8 +19,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="font-space-grotesk mx-15">
+      <body className="font-space-grotesk">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
