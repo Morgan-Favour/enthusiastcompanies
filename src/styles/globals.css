@@ -15,6 +15,9 @@
 .space-grotesk {
   font-family: 'Space Grotesk', sans-serif;
 }
+body{
+  font-family: 'Space Grotesk', sans-serif;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

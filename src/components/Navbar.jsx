@@ -36,16 +36,19 @@ const Navbar = () => {
       : "text-gray-700 hover:text-blue-600"
 
   return (
-    <header className="flex justify-between items-center py-4 px-6 shadow-sm">
+    <header className="flex justify-between items-center py-4 px-6 md:px-20 shadow-sm">
       {/* Logo */}
       <Link href="/">
-        <Image
+        <div className="flex justify-center items-center">
+          <Image
           width={100}
-          height={100}
-          src="/plug-logo.svg"
+          height={50}
+          src="/logo-icon.png"
           alt="Logo"
           priority
         />
+        <h2 className="space-grotesk text-2xl">Enthusiast <br /> Hydrogen</h2>
+        </div>
       </Link>
 
       {/* Desktop Menu */}
