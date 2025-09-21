@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion' 
 
 
 const Hero = () => {
@@ -23,15 +24,25 @@ const Hero = () => {
       {/* Content */}
       <div className="container text-white relative z-10">
         <section className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[90vh]">
-          <div>
-            <h1 className="text-5xl lg:7xl font-bold leading-tight uppercase">Enthusiast <br /> <span className='text-transparent text-outline'>Hydrogen</span></h1>
-            <button className="outline-btn flex justify-center items-center gap-5 text-xl mt-10">
+          <div className='space-y-8'>
+            <motion.h1 
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ 
+              type:"spring",
+              stiffness: 100,
+              damping: 10,
+              delay: 1,
+              duration: 0.4
+             }}
+            className="text-5xl lg:7xl font-bold leading-tight uppercase">Enthusiast <br /> <span className='text-transparent text-outline'>Hydrogen</span></motion.h1>
+            <button className="outline-btn flex justify-center items-center gap-5 text-xl group">
               Explore
-             <ArrowRight />
+              <ArrowRight className='group-hover:translate-x-2 transition' />
             </button>
           </div>
           <div>
-            <img src="/truck.png" alt="Truck" className='w-[100%]' />
+            <img src="/truck.png" alt="Truck" className='w-[10000px]' />
           </div>
         </section>
       </div>
