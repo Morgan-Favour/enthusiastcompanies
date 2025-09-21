@@ -135,5 +135,14 @@
     @apply bg-background text-foreground;
 
   }
+  .text-outline {
+    -webkit-text-stroke: 2px var(--color-eh-white);
+    color: transparent;
+   }
+}
 
+@layer components {
+  .outline-btn {
+    @apply border-[3px] rounded-xl px-6 py-2
+  }
 }
