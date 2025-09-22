@@ -52,7 +52,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <nav className="hidden md:block">
+      <nav className="hidden md:block text-eh-accent">
         <NavigationMenu>
           <NavigationMenuList className="flex gap-8">
             {links.map(({ href, label }) => (
