@@ -41,13 +41,13 @@ const Navbar = () => {
       <Link href="/">
         <div className="flex justify-center items-center">
           <Image
-          width={100}
-          height={50}
-          src="/logo-icon.png"
+          width={120}
+          height={100}
+          src="/logo.png"
           alt="Logo"
           priority
         />
-        <h2 className="space-grotesk text-2xl">Enthusiast <br /> Hydrogen</h2>
+        {/* <h2 className="space-grotesk text-2xl">Enthusiast <br /> Hydrogen</h2> */}
         </div>
       </Link>
 
