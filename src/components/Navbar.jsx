@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const isActive = (href) =>
     pathname === href
-      ? "text-blue-600 font-semibold underline"
+      ? "text-blue-600 font-semibold"
       : "text-gray-700 hover:text-blue-600"
 
   return (

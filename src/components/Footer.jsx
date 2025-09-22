@@ -24,12 +24,14 @@ const Footer = () => {
           initial={{ x: -150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, type: 'spring' }}
+          viewport={{ once: true }}
         >
           <Link href="/">
             <motion.div
               className="flex items-center justify-center md:justify-start"
               whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
               transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
             >
               <Image
                 width={100}
@@ -56,12 +58,14 @@ const Footer = () => {
           initial={{ x: 150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3, type: 'spring' }}
+          viewport={{ once: true }}
         >
           <h2 className="text-2xl md:text-3xl font-bold">GET IN TOUCH</h2>
           <motion.div
             className="space-y-2 text-sm"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
           >
             <p><strong>PHONE:</strong> +234 814 454 3193</p>
             <p><strong>EMAIL:</strong> morganfavour85@gmail.com</p>

@@ -19,6 +19,7 @@ const WhatWeDo = () => {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1, rotate: 360 }}
         transition={{ duration: 1, type: 'spring', stiffness: 200 }}
+        viewport={{ once: true }}
       >
         <Image
           src="/logo-icon.png"
@@ -31,6 +32,7 @@ const WhatWeDo = () => {
           className="text-4xl font-bold text-eh-accent mt-4"
           whileHover={{ scale: 1.2, rotate: [0, -5, 5, 0] }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
           What We Do
         </motion.h2>
@@ -41,6 +43,7 @@ const WhatWeDo = () => {
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
+        viewport={{ once: true }}
       >
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste ipsam aliquid harum maxime tempore quaerat culpa possimus, commodi nihil magnam iure vitae corporis sapiente optio blanditiis animi unde? Accusamus.
