@@ -8,8 +8,8 @@ function Title({ title, text1, text2, textAligment }) {
                     <span>{title}</span>
                 </div>
             </div>
-                <p className="text-eh-black font-bold text-4xl capitalize">{text1}</p>
-                <p className="text-eh-accent font-normal text-4xl capitalize">{text2}</p>
+                <p className="text-eh-black font-bold text-3xl md:text-4xl capitalize">{text1}</p>
+                <p className="text-eh-accent font-normal text-3xl md:text-4xl capitalize">{text2}</p>
         </div>
 
     )
