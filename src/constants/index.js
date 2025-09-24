@@ -1,4 +1,6 @@
-const Projects = [
+
+
+export const projectData = [
     {   
         id: 1,
         projectImage: "/hero-bg.jpeg",
@@ -25,5 +27,29 @@ const Projects = [
     },
 ]
 
-
-export default Projects;
+export const statsData = [
+    {
+        id: 1,
+        number: "400",
+        title: "Data Efficiency",
+        suffix: "K"
+    },
+    {
+        id: 2,
+        number: "150",
+        title: "Carbon Reduction",
+        suffix: "%"
+    },
+    {
+        id: 3,
+        number: "500",
+        title: "Projects Completed",
+        suffix: "+"
+    },
+    {
+        id: 4,
+        number: "100",
+        title: "Happy Clients",
+        suffix: "%"
+    }
+]

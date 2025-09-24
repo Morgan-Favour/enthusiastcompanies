@@ -4,10 +4,13 @@ import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
 import Tilt from 'react-parallax-tilt'
-import projects from '@/constants'
+import { projectData } from '../constants/index.js'
+
+
 
 const Projects = () => {
     return (
+
         <div className='text-center my-30 '>
             <motion.h2
                 className="text-4xl font-bold text-eh-accent mt-4"
@@ -18,7 +21,7 @@ const Projects = () => {
                 Projects
             </motion.h2>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 px-6 md:px-20 py-20 max-w-7xl mx-auto">
-                {projects.map((project, index) => (
+                {projectData.map((project, index) => (
                     <motion.div
                         key={project.id}
                         initial={{ opacity: 0, y: 50 }}
