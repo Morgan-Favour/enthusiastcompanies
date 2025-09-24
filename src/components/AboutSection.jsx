@@ -2,10 +2,11 @@
 
 import React, { useEffect, useRef } from 'react'
 import Title from './Title'
-import StatementCard from './StatementCard'
+
 import { useAnimation, useScroll } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useTransform } from 'framer-motion';
+import StatementCard from './StatementCard';
 
 const mission = [
     {
