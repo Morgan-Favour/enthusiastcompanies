@@ -47,7 +47,7 @@ function AboutSection() {
 
 
     return (
-        <div className="py-20 px-4 md:px-15 w-full h-full flex flex-col items-center justify-center">
+        <div className="py-20 px-4 md:px-15 w-full h-fit flex flex-col items-center justify-center">
             <div className="w-full h-full flex md:flex-row flex-col items-center justify-center gap-10" ref={containerRef}>
                 <motion.div
                     // initial={{ opacity: 0, x: -50 }}
@@ -67,6 +67,15 @@ function AboutSection() {
                             text1="We are a team of passionate individuals"
                             text2=" dedicated to advancing hydrogen technology"
                         />
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+                        viewport={{ once: true }}
+                        // style={{ x: slideRight }} 
+                        className="w-full md:hidden md:w-1/2 h-auto flex justify-center items-center mb-5">
+                        <img src="/about-section.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
                     </motion.div>
                     <motion.p
                         initial={{ opacity: 0, x: -50 }}
@@ -99,8 +108,8 @@ function AboutSection() {
                     transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
                     viewport={{ once: true }}
                     // style={{ x: slideRight }} 
-                    className="w-1/2 h-full flex justify-center items-center">
-                    <img src="/slide2.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
+                    className="w-full hidden md:w-1/2 h-auto md:flex justify-center items-center">
+                    <img src="/about-section.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
                 </motion.div>
             </div>
         </div>
