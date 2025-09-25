@@ -48,7 +48,7 @@ const WhatWeDo = () => {
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste ipsam aliquid harum maxime tempore quaerat culpa possimus, commodi nihil magnam iure vitae corporis sapiente optio blanditiis animi unde? Accusamus.
         </p>
-        <Link href="/about" className='text-eh-white px-6 py-2 rounded-lg bg-eh-accent'>Learn More</Link>
+        <Link href="/about" className='text-eh-white px-6 py-2 rounded-lg bg-eh-primary'>Learn More</Link>
       </motion.div>
     </motion.section>
   )
