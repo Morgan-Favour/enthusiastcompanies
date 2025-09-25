@@ -7,7 +7,7 @@ import WhatWeDo from "@/components/WhatWeDo";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-[#F9F6EE]">
       <Hero />
       <WhatWeDo />
       <Stats />
