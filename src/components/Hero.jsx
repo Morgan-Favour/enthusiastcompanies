@@ -35,6 +35,7 @@ const Hero = () => {
                 delay: 1,
                 duration: 0.4
               }}
+              viewport={{ once: true }}
             >
               <h1 className="text-5xl lg:7xl font-bold leading-tight uppercase">
                 Enthusiast <br />
@@ -51,6 +52,7 @@ const Hero = () => {
                 delay: 1.2,
                 duration: 0.5
               }}
+              viewport={{ once: true }}
               className="outline-btn flex justify-center items-center gap-5 text-xl group">
               Explore
               <ArrowRight className='group-hover:translate-x-2 transition' />
@@ -63,6 +65,7 @@ const Hero = () => {
             transition={{
               duration: 1,
             }}
+            viewport={{ once: true }}
             src="/truck.png" alt="Truck" className='w-[100%]' />
           </div>
         </section>

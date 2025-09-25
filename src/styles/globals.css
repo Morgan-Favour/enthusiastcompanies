@@ -15,7 +15,8 @@
 .space-grotesk {
   font-family: 'Space Grotesk', sans-serif;
 }
-body{
+
+body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -134,18 +135,46 @@ body{
     @apply border-border outline-ring/50;
 
   }
+
   body {
     @apply bg-background text-foreground;
 
   }
+
   .text-outline {
     -webkit-text-stroke: 2px var(--color-eh-white);
     color: transparent;
-   }
+  }
 }
 
 @layer components {
   .outline-btn {
     @apply border-[3px] rounded-xl px-6 py-2
+  }
+}
+
+.parallax-effect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: darkgreen;
+  color: white;
+  border: 5px solid black;
+  border-radius: 20px;
+
+  transform-style: preserve-3d;
+
+  .inner-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-style: italic;
+    color: white;
+    transform: translateZ(60px);
   }
 }

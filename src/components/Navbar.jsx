@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const isActive = (href) =>
     pathname === href
-      ? "text-blue-600 font-semibold underline"
+      ? "text-blue-600 font-semibold"
       : "text-gray-700 hover:text-blue-600"
 
   return (
@@ -52,7 +52,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <nav className="hidden md:block">
+      <nav className="hidden md:block text-eh-accent">
         <NavigationMenu>
           <NavigationMenuList className="flex gap-8">
             {links.map(({ href, label }) => (
