@@ -73,3 +73,25 @@ export const whatWeDoCards = [
       icon: <Rocket className="w-10 h-10 text-eh-primary" />
     },
   ]
+  export const whyUsData =[
+    {
+        id: 1,
+        title: "Expertise",
+        description: "Our team of seasoned professionals brings deep industry knowledge and technical expertise to every project, ensuring innovative and effective hydrogen solutions."
+    },
+    {
+        id: 2,
+        title: "Sustainability",
+        description: "We are committed to driving the transition to clean energy, helping clients reduce their carbon footprint and achieve their sustainability goals through hydrogen technology."
+    },
+    {
+        id: 3,
+        title: "Customized Solutions",
+        description: "We understand that every client has unique needs. We tailor our hydrogen solutions to fit specific applications, ensuring optimal performance and value."
+    },
+    {
+        id: 4,
+        title: "End-to-End Service",
+        description: "From initial consultation to project completion and beyond, we provide comprehensive support and service, ensuring a seamless experience for our clients."
+    }
+  ]
