@@ -45,8 +45,8 @@ function TeamMembers() {
                         className="">
                         <Title title="Our Experts"
                             textAligment="left"
-                            text1="We are a team of passionate individuals"
-                            text2=" dedicated to advancing hydrogen technology"
+                            text1="Meet a Team"
+                            text2=" of Industry Leaders"
                         />
                     </motion.div>
                     <motion.p
@@ -56,8 +56,15 @@ function TeamMembers() {
                         // viewport={{ once: true }}
                         style={{ x: slideLeft }}
                         className="text-normal text-eh-black text-lg mb-5">
-                        At Enthusiast Hydrogen Company, we are committed to pioneering innovative hydrogen solutions that drive sustainable energy practices worldwide. Our team of experts collaborates across various disciplines to develop cutting-edge technologies that harness the power of hydrogen for a cleaner, greener future.
+                        Our team comprises seasoned professionals with extensive experience in hydrogen technology, renewable energy, and sustainable development. Together, we are committed to driving innovation and making a positive impact on the world.
                     </motion.p>
+                </motion.div>
+                <motion.div className="w-full md:w-3/4 flex flex-col md:flex-row gap-5 justify-start items-start">
+                    <div className="w-full h-full grid grid-cols-2 md:grid-cols-4 items-center justify-start">
+                        <div className="flex flex-col gap-5 items-center justify-center">
+                            <div className="overflow-hidden rounded-4xl w-full h-[150px] bg-eh-primary"></div>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </div>
