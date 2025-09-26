@@ -5,6 +5,7 @@ import WhatWeDo from "@/components/WhatWeDo";
 // import Image from "next/image";
 
 
+
 export default function Home() {
   return (
     <div className="bg-[#F9F6EE]">
@@ -12,7 +13,6 @@ export default function Home() {
       <WhatWeDo />
       <Stats />
       <Projects />
-      
     </div>
   );
 }

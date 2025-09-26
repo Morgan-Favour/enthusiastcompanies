@@ -41,6 +41,7 @@ const Hero = () => {
                 Enthusiast <br />
                 <span className='text-transparent text-outline'>Hydrogen</span>
               </h1>
+              <p className='text-lg'>Driving the future of clean hydrogen energy</p>
             </motion.div>
             <motion.button
               initial={{ opacity: 0, y: -100 }}

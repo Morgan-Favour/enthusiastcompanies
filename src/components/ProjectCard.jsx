@@ -11,9 +11,9 @@ const ProjectCard = () => {
             {projectData.map((project, index) => (
                 <motion.div
                     key={project.id}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                    initial={{ opacity: 0, x: 100 }}   // start off to the right
+                    animate={{ opacity: 1, x: 0 }}     // slide into place
+                    transition={{ duration: 0.6, delay: index * 0.2 }} // staggered by index
                 >
                     <Tilt
                         glareEnable={true}
@@ -46,7 +46,7 @@ const ProjectCard = () => {
 
                                     {/* Learn More Button */}
                                     <div className="mt-4">
-                                        <span className="inline-block border-eh-accent text-eh-primary px-4 py-2 text-sm rounded-md shadow-lg  transition">
+                                        <span className="inline-block border-eh-accent text-eh-primary px-4 py-2 text-sm rounded-md shadow-lg transition">
                                             Learn More
                                         </span>
                                     </div>
