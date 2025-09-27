@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const Hero = () => {
 
   return (
-    <main className="w-full relative min-h-[90vh] px-10 md:px-15 mt-10">
+    <main className="w-full relative min-h-[90vh] px-10 md:px-15">
       {/* Background image */}
       <Image
         src="/hero-bg.jpeg"
@@ -23,7 +23,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container text-white relative z-10">
-        <section className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[90vh]">
+        <section className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[90vh] mt-0 md:mt-10">
           <div className='space-y-8'>
             <motion.div
               initial={{ opacity: 0, y: -100 }}

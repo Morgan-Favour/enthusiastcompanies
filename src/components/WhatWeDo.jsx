@@ -65,7 +65,7 @@ const WhatWeDo = () => {
 
       {/* Cards */}
       <motion.div 
-        className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-35 md:20 place-items-center"
+        className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32 md:mt-20 place-items-center"
         initial="hidden"
         whileInView="show"
         variants={{
