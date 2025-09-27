@@ -95,3 +95,20 @@ export const whatWeDoCards = [
         description: "From initial consultation to project completion and beyond, we provide comprehensive support and service, ensuring a seamless experience for our clients."
     }
   ]
+    export const whyInvestData = [
+    {
+        id: 1,
+        title: "Market Growth",
+        desc: "The hydrogen market is projected to grow exponentially in the coming decades, driven by increasing demand for clean energy solutions."
+    },
+    {
+        id: 2,
+        title: "Technological Advancements",
+        desc: "Ongoing innovations in hydrogen production, storage, and utilization are making it more efficient and cost-effective."
+    },
+    {
+        id: 3,
+        title: "Government Support",
+        desc: "Many governments worldwide are implementing policies and incentives to promote hydrogen energy as part of their climate action plans."
+    },
+]

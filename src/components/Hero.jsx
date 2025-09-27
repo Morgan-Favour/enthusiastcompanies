@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const Hero = () => {
 
   return (
-    <main className="w-full relative min-h-[90vh]">
+    <main className="w-full relative min-h-[90vh] px-10 md:px-15 mt-10">
       {/* Background image */}
       <Image
         src="/hero-bg.jpeg"

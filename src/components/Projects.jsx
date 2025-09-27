@@ -7,7 +7,7 @@ import ProjectCard from './ProjectCard'
 
 const Projects = () => {
     return (
-        <div className='text-center pt-20 px-15'>
+        <div className='text-center pt-20 px-8 md:px-15'>
             <motion.h2
                 className="text-4xl font-bold text-eh-accent mt-4"
                 whileHover={{ scale: 1.2, rotate: [0, -5, 5, 0] }}
