@@ -89,9 +89,7 @@ function TeamMembers() {
                             <div className="overflow-hidden h-[200px] w-full mb-4">
                                 <img src="/slide4.jpg" alt="Team Member 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
                             </div>
-                            <h2 className="text-2xl font-bold text-eh-black capitalize">
-                                {teamMembers.name[0]}
-                            </h2>
+                            
 
                         </div>
                         
