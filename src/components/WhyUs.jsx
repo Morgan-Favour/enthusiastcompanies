@@ -21,7 +21,7 @@ const item = {
 
 const WhyUs = () => {
   return (
-    <section className=" px-6 md:px-20 max-w-7xl mx-auto">
+    <section className=" px-6 md:px-20 max-w-7xl mx-auto py-10 md:py-20">
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center"
         initial="hidden"

@@ -23,9 +23,9 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-20 container text-white px-10 md:px-15">
-        <section className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[90vh] mt-10 md:mt-20">
+        <section className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[80vh] mt-25 md:mt-20 pt-10 md:pt-20">
           {/* Left content */}
-          <div className="space-y-8">
+          <div className="space-y-8 order-2 md:order-1 text-center md:text-left items-center justify-center flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: -100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const Hero = () => {
               }}
               viewport={{ once: true }}
             >
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight uppercase">
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight uppercase mb-4">
                 Enthusiast <br />
                 <span className="text-transparent text-outline">Hydrogen</span>
               </h1>
@@ -73,7 +73,7 @@ const Hero = () => {
             viewport={{ once: true }}
             src="/truck.png"
             alt="Truck"
-            className="w-full"
+            className="w-3/4 order-1 md:w-[400px]"
           />
         </section>
       </div>

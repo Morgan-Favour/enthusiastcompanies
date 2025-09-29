@@ -46,9 +46,7 @@ const Footer = () => {
             </motion.div>
           </Link>
           <p className="text-sm leading-relaxed">
-            Petroleum is the leader in the country sed diam nonumy eirmod tempor invidunt ut labore
-            and efficient strategy. We provide the energy to medium and big company, sadipscing elitr,
-            sed diam nonumy.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nam atque repellat sed, laboriosam possimus veniam porro sequi inventore nihil ullam quis nesciunt officiis similique, veritatis quibusdam consectetur. Tenetur, at.
           </p>
         </motion.div>
 
