@@ -20,11 +20,11 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
   { href: "/how-it-works", label: "How It Works" },
+  { href: "/projects", label: "Projects" },
   { href: "/impact", label: "Impact" },
   { href: "/investor-relations", label: "Investor Relations" },
-  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
 ]
 
 const Navbar = () => {

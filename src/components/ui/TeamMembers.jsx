@@ -7,30 +7,6 @@ import { motion, useAnimation, useInView, useScroll, useTransform } from 'framer
 
 
 
-const teamMembers = [
-    {
-        name: 'Mo',
-        role: 'Project Manager'
-    },
-    {
-        name: 'John Doe',
-        role: 'Manager'
-    },
-    {
-        name: 'Gabriel Thankgod',
-        role: 'Solar Expert'
-    },
-    {
-        name: 'Gabriel thankgod',
-        role: 'Lead Developer'
-    },
-    {
-        name: 'Ezekiel Etim',
-        role: 'Items officer'
-    },
-    
-]
-
 function TeamMembers() {
 
     const { scrollYProgress: completionProgress } = useScroll();
@@ -44,7 +20,7 @@ function TeamMembers() {
         offset: ["start end", "end end"],
     });
 
-    const slideLeft = useTransform(scrollYProgress, [0, 1], ["-60%", "0%"]);
+    const slideLeft = useTransform(scrollYProgress, [0, 1], ["-25%", "0%"]);
 
     const slideRight = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
 
@@ -61,11 +37,11 @@ function TeamMembers() {
             <div className="w-full h-full flex flex-col md:flex-row gap-5 items-center justify-start" ref={containerRef}>
                 <motion.div className="flex flex-col items-start justify-start gap-5 w-full md:w-[40%]">
                     <motion.div
-                        // initial={{ opacity: 0, x: -50 }}
-                        // whileInView={{ opacity: 1, x: 0 }}
-                        // transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
-                        // viewport={{ once: true }}
-                        style={{ x: slideLeft }}
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+                        viewport={{ once: true }}
+                        // style={{ x: slideLeft }}
                         className="">
                         <Title title="Our Experts"
                             textAligment="left"
@@ -74,26 +50,59 @@ function TeamMembers() {
                         />
                     </motion.div>
                     <motion.p
-                        // initial={{ opacity: 0, x: -50 }}
-                        // whileInView={{ opacity: 1, x: 0 }}
-                        // transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
-                        // viewport={{ once: true }}
-                        style={{ x: slideLeft }}
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+                        viewport={{ once: true }}
+                        // style={{ x: slideLeft }}
                         className="text-normal text-eh-black text-lg mb-5">
                         Our team comprises seasoned professionals with extensive experience in hydrogen technology, renewable energy, and sustainable development. Together, we are committed to driving innovation and making a positive impact on the world.
                     </motion.p>
                 </motion.div>
-                <motion.div className="p-3 flex  justify-start items-startw-full md:w-[60%]">
-                    <div className="w-full h-full grid grid-cols-2 md:grid-cols-3 items-center justify-start gap-5">
-                        <div className="flex flex-col gap-5 items-center justify-center shadow-lg rounded-2xl overflow-hidden">
+                <motion.div className="p-3 flex  justify-start items-start w-full md:w-[60%]">
+                    <div className="w-[90%] h-full grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-5">
+                        <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+                        viewport={{ once: true }}
+                        className="flex flex-col gap-5 items-center justify-center shadow-lg rounded-2xl overflow-hidden">
                             <div className="overflow-hidden h-[200px] w-full mb-4">
-                                <img src="/slide4.jpg" alt="Team Member 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
+                                <img src="/profile.jpg" alt="Team Member 1" className="w-full h-full object-cover object-top  hover:scale-105 transition-transform duration-300 ease-in-out" />
                             </div>
-                            
-
-                        </div>
-                        
-                        
+                            <div className="flex flex-col gap-3 items-center justify-center p-3">
+                                <h3 className="text-2xl font-semibold text-eh-black">John Doe</h3>
+                                <p className="text-eh-black font-bold text-lg">Project Manager</p>
+                            </div>
+                        </motion.div>
+                        <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+                        viewport={{ once: true }}
+                        className="flex flex-col gap-5 items-center justify-center shadow-lg rounded-2xl overflow-hidden">
+                            <div className="overflow-hidden h-[200px] w-full mb-4">
+                                <img src="/profile.jpg" alt="Team Member 1" className="w-full h-full object-cover object-top  hover:scale-105 transition-transform duration-300 ease-in-out" />
+                            </div>
+                            <div className="flex flex-col gap-3 items-center justify-center p-3">
+                                <h3 className="text-2xl font-semibold text-eh-black">John Doe</h3>
+                                <p className="text-eh-black font-bold text-lg">Project Manager</p>
+                            </div>
+                        </motion.div>
+                        <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+                        viewport={{ once: true }}
+                        className="flex flex-col gap-5 items-center justify-center shadow-lg rounded-2xl overflow-hidden">
+                            <div className="overflow-hidden h-[200px] w-full mb-4">
+                                <img src="/profile.jpg" alt="Team Member 1" className="w-full h-full object-cover object-top  hover:scale-105 transition-transform duration-300 ease-in-out" />
+                            </div>
+                            <div className="flex flex-col gap-3 items-center justify-center p-3">
+                                <h3 className="text-2xl font-semibold text-eh-black">John Doe</h3>
+                                <p className="text-eh-black font-bold text-lg">Project Manager</p>
+                            </div>
+                        </motion.div>
                     </div>
                 </motion.div>
             </div>
