@@ -16,7 +16,7 @@ export default function SubHeader() {
   const pathname = usePathname();
   const title = pageTitles[pathname] || pathname.replace("/", "").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) || "Page";
   return (
-    <div className="relative w-full py-[30px] flex items-center justify-center bg-cover bg-center bg-no-repeat  px-10 md:px-15" style={{ backgroundImage: "url('/slide1.jpg')" }}>
+    <div className="relative w-full pt-[150px] pb-[50px] flex items-center justify-center bg-cover bg-center bg-no-repeat  px-10 md:px-15" style={{ backgroundImage: "url('/slide1.jpg')" }}>
         <div className="absolute inset-0 bg-black opacity-50 w-full h-full"></div>
         <div className="z-10 w-full h-full flex flex-col items-center justify-center gap-2">
             <h2 className="text-white text-5xl font-extrabold capitalize">{title}</h2>
