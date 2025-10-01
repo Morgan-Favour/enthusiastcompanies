@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
 import Footer from "@/components/Footer";
 import SubHeaderWrapper from "@/components/SubHeaderWrapper";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 export const metadata = {
   title: "Enthusiast Hydrogen Company",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <SubHeaderWrapper />
         {children}
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>
