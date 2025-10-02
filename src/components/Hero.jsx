@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Hero = () => {
   return (
-    <main className="relative w-full min-h-[100vh] overflow-hidden">
+    <main className="relative w-full min-h-[100vh] overflow-hidden flex items-center justify-center text-center">
       {/* Background video */}
       <video
         autoPlay
@@ -20,63 +20,48 @@ const Hero = () => {
       </video>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-eh-primary/60 to-eh-black/60 z-10"></div>
+      <div className="absolute inset-0 bg-eh-black/70 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 container text-white px-10 md:px-15">
-        <section className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[80vh] mt-25 md:mt-20 pt-10 md:pt-20">
-          {/* Left content */}
-          <div className="space-y-8 order-2 md:order-1 text-left items-start justify-center flex flex-col">
-            <motion.div
-              initial={{ opacity: 0, y: -100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                type: 'spring',
-                stiffness: 100,
-                damping: 10,
-                delay: 1,
-                duration: 0.4,
-              }}
-              viewport={{ once: true }}
-            >
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight uppercase mb-4">
-                Enthusiast <br />
-                <span className="text-transparent text-outline">Hydrogen</span>
-              </h1>
-              <p className="text-lg max-w-xl">
-                Driving the future of clean hydrogen energy
-              </p>
-            </motion.div>
+      <div className="relative z-20 px-6 md:px-12 max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight uppercase mb-6 text-eh-white">
+            Enthusiast <br />
+            <span className="bg-gradient-to-r from-eh-white to-eh-primary bg-clip-text text-transparent">
+              Hydrogen
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10">
+            Driving the future of clean hydrogen energy
+          </p>
+        </motion.div>
 
-            <motion.button
-              initial={{ opacity: 0, y: -100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                type: 'spring',
-                stiffness: 100,
-                damping: 10,
-                delay: 1.2,
-                duration: 0.5,
-              }}
-              viewport={{ once: true }}
-              className="outline-btn flex justify-center items-center gap-5 text-xl group"
-            >
-              Explore
-              <ArrowRight className="group-hover:translate-x-2 transition" />
-            </motion.button>
-          </div>
-
-          {/* Right image */}
-          <motion.img
-            initial={{ opacity: 0, x: 200 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            src="/truck.png"
-            alt="Truck"
-            className="w-3/4 order-1 md:w-[400px]"
-          />
-        </section>
+        {/* Animated CTA Button */}
+        <motion.button
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 10,
+            delay: 1,
+          }}
+          className="relative px-8 py-4 text-xl text-eh-white font-semibold rounded-full overflow-hidden group"
+        >
+          <span className="relative z-10 flex items-center justify-center gap-3">
+            Explore
+            <ArrowRight className="transition-transform group-hover:translate-x-2" />
+          </span>
+          {/* Cool animated gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-eh-primary to-eh-black opacity-90 group-hover:opacity-100 transition-all duration-500"></div>
+        </motion.button>
       </div>
     </main>
   )
