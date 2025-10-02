@@ -12,9 +12,14 @@ export const animatePageIn = () => {
 
     tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: 0,
-    }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
+      display: "block",
+    })
+    .to([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: 100,
       stagger: 0.2,
+      onComplete: () => {
+        gsap.set([bannerOne, bannerTwo, bannerThree, bannerFour], { display: "none" });
+      }
     })
   }
 }
@@ -30,10 +35,14 @@ export const animatePageOut = (href, router) => {
 
     tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: -100,
-    }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
+      display: "block", // Ensure visible at start
+    })
+    .to([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: 0,
       stagger: 0.2,
       onComplete: () => {
+        // Hide banners after animation
+        gsap.set([bannerOne, bannerTwo, bannerThree, bannerFour], { display: "none" });
         router.push(href)
       },
     })

@@ -71,7 +71,7 @@ function AboutSection() {
                         viewport={{ once: true }}
                         // style={{ x: slideRight }} 
                         className="w-full md:hidden md:w-1/2 h-auto flex justify-center items-center mb-5">
-                        <img src="/about-section.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
+                        <img src="/image1.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
                     </motion.div>
                     <motion.p
                         initial={{ opacity: 0, x: -50 }}
@@ -105,7 +105,7 @@ function AboutSection() {
                     viewport={{ once: true }}
                     // style={{ x: slideRight }} 
                     className="w-full hidden md:w-1/2 h-auto md:flex justify-center items-center">
-                    <img src="/about-section.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
+                    <img src="/image1.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
                 </motion.div>
             </div>
         </div>

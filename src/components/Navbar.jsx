@@ -55,9 +55,6 @@ const Navbar = () => {
           <NavigationMenuList className="flex gap-8">
             {links.map(({ href, label }) => (
               <NavigationMenuItem key={href}>
-                {/* <Link href={href} className={isActive(href)}>
-                  {label}
-                </Link> */}
                 <TransitionLink href={href} label={label} className={isActive(href)} />
               </NavigationMenuItem>
             ))}
@@ -82,14 +79,7 @@ const Navbar = () => {
             </SheetTitle>
             <nav className="flex flex-col gap-4 mt-8">
               {links.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className={isActive(href)}
-                  onClick={() => setOpen(false)}
-                >
-                  {label}
-                </Link>
+                <TransitionLink key={href} href={href} label={label} className={isActive(href)} />
               ))}
             </nav>
           </SheetContent>
