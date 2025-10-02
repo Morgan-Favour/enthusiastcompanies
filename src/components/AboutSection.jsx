@@ -51,11 +51,6 @@ function AboutSection() {
         <div className="py-20 px-4 md:px-15 w-full h-fit flex flex-col items-center justify-center">
             <div className="w-full h-full flex md:flex-row flex-col items-center justify-center gap-10" ref={containerRef}>
                 <motion.div
-                    // initial={{ opacity: 0, x: -50 }}
-                    // whileInView={{ opacity: 1, x: 0 }}
-                    // transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
-                    // viewport={{ once: true }}
-                    // style={{ x: slideLeft }} 
                     className="w-full md:w-1/2 flex flex-col gap-6 items-start justify-start">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
