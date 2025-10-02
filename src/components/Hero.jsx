@@ -1,31 +1,32 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
   return (
-    <main className="relative w-full min-h-[90vh]">
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-bg.jpeg"
-          alt="Hero Background"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-      </div>
+    <main className="relative w-full min-h-[100vh] overflow-hidden">
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/bg-video.mp4" type="video/mp4" />
+        <source src="/bg-video.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-eh-primary to-eh-black/60 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-eh-primary/60 to-eh-black/60 z-10"></div>
 
       {/* Content */}
       <div className="relative z-20 container text-white px-10 md:px-15">
         <section className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[80vh] mt-25 md:mt-20 pt-10 md:pt-20">
           {/* Left content */}
-          <div className="space-y-8 order-2 md:order-1 text-center md:text-left items-center justify-center flex flex-col">
+          <div className="space-y-8 order-2 md:order-1 text-left items-start justify-center flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: -100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +43,7 @@ const Hero = () => {
                 Enthusiast <br />
                 <span className="text-transparent text-outline">Hydrogen</span>
               </h1>
-              <p className="text-lg">
+              <p className="text-lg max-w-xl">
                 Driving the future of clean hydrogen energy
               </p>
             </motion.div>
@@ -82,4 +83,3 @@ const Hero = () => {
 }
 
 export default Hero
-  
