@@ -45,8 +45,8 @@ const WhyUs = () => {
           >
             <Image
               width={600}
-              height={400}
-              src="/slide2.jpg"
+              height={200}
+              src="/image2.jpg"
               alt="Growth Infographic"
               className="mx-auto rounded-2xl"
             />
@@ -57,8 +57,8 @@ const WhyUs = () => {
           >
             <Image
               width={600}
-              height={400}
-              src="/slide3.jpg"
+              height={200}
+              src="/image3.jpg"
               alt="Growth Infographic"
               className="mx-auto rounded-2xl"
             />

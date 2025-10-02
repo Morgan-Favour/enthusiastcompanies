@@ -6,7 +6,7 @@ import { statsData } from '../constants/index.js'
 
 const Stats = () => {
   return (
-    <section className='w-full flex items-center justify-center bg-eh-primary'>
+    <section className='w-full flex items-center justify-center'>
       <motion.div
         initial={{ opacity: 0, x: 200 }}
         whileInView={{ opacity: 1, x: 0 }}
