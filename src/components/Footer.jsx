@@ -7,7 +7,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <motion.footer
-      className="bg-[url('/footer-bg.jpg')] bg-cover bg-bottom bg-no-repeat relative text-white px-6 md:px-20 overflow-hidden"
+      className="bg-[url('/image2.jpg')] bg-cover bg-center bg-no-repeat relative text-white px-6 md:px-20 overflow-hidden"
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, type: 'spring', bounce: 0.3 }}
