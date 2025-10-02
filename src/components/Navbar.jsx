@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
+import TransitionLink from "./TransitionLink"
 
 const links = [
   { href: "/", label: "Home" },
@@ -58,9 +59,10 @@ const Navbar = () => {
           <NavigationMenuList className="flex gap-8">
             {links.map(({ href, label }) => (
               <NavigationMenuItem key={href}>
-                <Link href={href} className={isActive(href)}>
+                {/* <Link href={href} className={isActive(href)}>
                   {label}
-                </Link>
+                </Link> */}
+                <TransitionLink href={href} label={label} className={isActive(href)} />
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>

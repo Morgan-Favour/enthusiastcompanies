@@ -1,6 +1,7 @@
 
 import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
+
 import Footer from "@/components/Footer";
 import SubHeaderWrapper from "@/components/SubHeaderWrapper";
 
@@ -8,7 +9,7 @@ export const metadata = {
   title: "Enthusiast Hydrogen Company",
   description: "Leading innovator in hydrogen technology solutions",
   icons: {
-    icon: '/logo.png', // Your company logo as favicon
+    icon: "/logo.png", // Your company logo as favicon
   },
 };
 
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
       <body className="font-space-grotesk">
         <Navbar />
         <SubHeaderWrapper />
-        {children}
+          {children}
         <Footer />
       </body>
     </html>
