@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Hero = () => {
   return (
-    <main className="relative w-full min-h-[100vh] flex items-center justify-center text-center">
+   <main className="relative w-full min-h-[100svh] flex items-center justify-center text-center">
       {/* Background video */}
       <video
         autoPlay
