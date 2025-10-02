@@ -13,6 +13,7 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetTitle
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
@@ -71,19 +72,19 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-64 p-8 bg-white/30 backdrop-blur-lg border-l border-white/20 shadow-lg 
-                       transition-transform duration-500 ease-out data-[state=open]:translate-x-0 
-                       data-[state=closed]:translate-x-full"
+            className="w-64 pl-10 h-full overflow-y-auto backdrop-blur-md bg-white/70"
           >
-            <VisuallyHidden>
-              <h2>Mobile Menu</h2>
-            </VisuallyHidden>
-            <nav className="flex flex-col gap-6 mt-8 text-lg font-medium">
+            <SheetTitle>
+              <VisuallyHidden>Mobile Menu</VisuallyHidden>
+            </SheetTitle>
+            <nav className="flex flex-col gap-4 mt-8">
               {links.map(({ href, label }) => (
                 <TransitionLink key={href} href={href} label={label} className={isActive(href)} />
               ))}
             </nav>
           </SheetContent>
+
+
         </Sheet>
       </div>
     </header>
