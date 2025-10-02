@@ -21,10 +21,6 @@ import TransitionLink from "./TransitionLink"
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/how-it-works", label: "How It Works" },
-  { href: "/projects", label: "Projects" },
-  { href: "/impact", label: "Impact" },
-  { href: "/investor-relations", label: "Investor Relations" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -38,10 +34,10 @@ const Navbar = () => {
       : "text-gray-700 hover:text-blue-600"
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-eh-white backdrop-blur-md shadow-sm z-50 flex justify-between items-center py-4 px-6 md:px-20">
+    <header className="fixed top-0 left-0 w-full bg-eh-white/70 backdrop-blur-md shadow-sm z-50 flex justify-between items-center py-4 px-6 md:px-20">
       {/* Logo */}
       <Link href="/">
-        <div className="flex justify-center items-center">
+        <div className="flex items-center">
           <Image
             width={120}
             height={100}
@@ -49,7 +45,6 @@ const Navbar = () => {
             alt="Logo"
             priority
           />
-          {/* <h2 className="space-grotesk text-2xl">Enthusiast <br /> Hydrogen</h2> */}
         </div>
       </Link>
 
@@ -71,14 +66,19 @@ const Navbar = () => {
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <button aria-label="Open menu">
-              <Menu className="h-6 w-6" />
+              <Menu className="h-7 w-7 text-eh-accent" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-64 pl-10">
+          <SheetContent
+            side="right"
+            className="w-64 p-8 bg-white/30 backdrop-blur-lg border-l border-white/20 shadow-lg 
+                       transition-transform duration-500 ease-out data-[state=open]:translate-x-0 
+                       data-[state=closed]:translate-x-full"
+          >
             <VisuallyHidden>
               <h2>Mobile Menu</h2>
             </VisuallyHidden>
-            <nav className="flex flex-col gap-4 mt-8">
+            <nav className="flex flex-col gap-6 mt-8 text-lg font-medium">
               {links.map(({ href, label }) => (
                 <TransitionLink key={href} href={href} label={label} className={isActive(href)} />
               ))}
