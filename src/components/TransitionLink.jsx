@@ -19,7 +19,7 @@ const TransitionLink = ({ href, label, className, handleClick }) => {
       className={className}
       onClick={() => {
         animatePage()
-        handleClick()
+        {handleClick}
       }}
       href={href}
     >

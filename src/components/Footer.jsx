@@ -34,15 +34,16 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <Image
-                width={100}
-                height={50}
-                src="/logo-icon.png"
+                width={200}
+                height={100}
+                src="/footer-logo.png"
                 alt="Logo"
+                className='mb-5'
                 priority
               />
-              <h2 className="space-grotesk text-2xl ml-3">
+              {/* <h2 className="space-grotesk text-2xl ml-3">
                 Enthusiast <br /> Hydrogen
-              </h2>
+              </h2> */}
             </motion.div>
           </Link>
           <p className="text-sm leading-relaxed">
