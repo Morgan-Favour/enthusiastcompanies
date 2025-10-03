@@ -18,6 +18,7 @@ import {
 import { Menu } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import TransitionLink from "./TransitionLink"
+import { animatePageOut } from "@/utils/animation"
 
 const links = [
   { href: "/", label: "Home" },
@@ -28,6 +29,12 @@ const links = [
 const Navbar = () => {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    if (pathname !== href) {
+      animatePageOut(href, router)
+    }
+  }
 
   const isActive = (href) =>
     pathname === href
@@ -55,7 +62,7 @@ const Navbar = () => {
           <NavigationMenuList className="flex gap-8">
             {links.map(({ href, label }) => (
               <NavigationMenuItem key={href}>
-                <TransitionLink href={href} label={label} className={isActive(href)} />
+                <TransitionLink href={href} label={label} className={isActive(href)} handleClick={handleClick} />
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
@@ -79,7 +86,7 @@ const Navbar = () => {
             </SheetTitle>
             <nav className="flex flex-col gap-4 mt-8">
               {links.map(({ href, label }) => (
-                <TransitionLink key={href} href={href} label={label} className={isActive(href)} />
+                <TransitionLink key={href} href={href} label={label} className={isActive(href)} handleClick={handleClick} />
               ))}
             </nav>
           </SheetContent>
