@@ -105,7 +105,7 @@ function AboutSection() {
                     viewport={{ once: true }}
                     // style={{ x: slideRight }} 
                     className="w-full hidden md:w-1/2 h-auto md:flex justify-center items-center">
-                    <img src="/image1.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
+                    <img src="/image3.jpg" alt="About Us" className="w-full h-full object-cover rounded-lg shadow-lg" />
                 </motion.div>
             </div>
         </div>
