@@ -9,7 +9,7 @@ import WhyUs from "@/components/WhyUs";
 
 export default function Home() {
   return (
-    <div className="bg-[#F9F6EE]">
+    <div className="bg-[#F9F6EE] w-full overflow-hidden">
       <Hero />
       <WhatWeDo />
       <Stats />

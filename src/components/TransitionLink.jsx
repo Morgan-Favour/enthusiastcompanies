@@ -1,25 +1,30 @@
 "use client"
 
 import { animatePageOut } from "@/utils/animation"
+import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 
 // Prop types are not needed in JS files; consider using PropTypes for type checking if desired.
 
-const TransitionLink = ({ href, label, className }) => {
+const TransitionLink = ({ href, label, className, handleClick }) => {
   const router = useRouter()
   const pathname = usePathname()
 
-  const handleClick = () => {
+  const animatePage = () => {
     animatePageOut(href, router)
   }
 
   return (
-    <button
+    <Link
       className={className}
-      onClick={handleClick}
+      onClick={() => {
+        animatePage()
+        {handleClick}
+      }}
+      href={href}
     >
       {label}
-    </button>
+    </Link>
   )
 }
 

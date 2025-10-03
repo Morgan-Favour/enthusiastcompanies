@@ -13,10 +13,12 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetTitle
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import TransitionLink from "./TransitionLink"
+import { animatePageOut } from "@/utils/animation"
 
 const links = [
   { href: "/", label: "Home" },
@@ -27,6 +29,12 @@ const links = [
 const Navbar = () => {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    if (pathname !== href) {
+      animatePageOut(href, router)
+    }
+  }
 
   const isActive = (href) =>
     pathname === href
@@ -54,10 +62,7 @@ const Navbar = () => {
           <NavigationMenuList className="flex gap-8">
             {links.map(({ href, label }) => (
               <NavigationMenuItem key={href}>
-                {/* <Link href={href} className={isActive(href)}>
-                  {label}
-                </Link> */}
-                <TransitionLink href={href} label={label} className={isActive(href)} />
+                <TransitionLink href={href} label={label} className={isActive(href)} handleClick={handleClick} />
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
@@ -74,26 +79,19 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-64 p-8 bg-white/30 backdrop-blur-lg border-l border-white/20 shadow-lg 
-                       transition-transform duration-500 ease-out data-[state=open]:translate-x-0 
-                       data-[state=closed]:translate-x-full"
+            className="w-64 pl-10 h-full overflow-y-auto backdrop-blur-md bg-white/70"
           >
-            <VisuallyHidden>
-              <h2>Mobile Menu</h2>
-            </VisuallyHidden>
-            <nav className="flex flex-col gap-6 mt-8 text-lg font-medium">
+            <SheetTitle>
+              <VisuallyHidden>Mobile Menu</VisuallyHidden>
+            </SheetTitle>
+            <nav className="flex flex-col gap-4 mt-8">
               {links.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className={isActive(href)}
-                  onClick={() => setOpen(false)}
-                >
-                  {label}
-                </Link>
+                <TransitionLink key={href} href={href} label={label} className={isActive(href)} handleClick={handleClick} />
               ))}
             </nav>
           </SheetContent>
+
+
         </Sheet>
       </div>
     </header>

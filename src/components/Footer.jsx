@@ -7,7 +7,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <motion.footer
-      className="bg-[url('/footer-bg.jpg')] bg-cover bg-bottom bg-no-repeat relative text-white px-6 md:px-20 overflow-hidden"
+      className="bg-[url('/image2.jpg')] bg-cover bg-center bg-no-repeat relative text-white px-6 md:px-20 overflow-hidden"
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, type: 'spring', bounce: 0.3 }}
@@ -34,15 +34,16 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <Image
-                width={100}
-                height={50}
-                src="/logo-icon.png"
+                width={200}
+                height={100}
+                src="/footer-logo.png"
                 alt="Logo"
+                className='mb-5'
                 priority
               />
-              <h2 className="space-grotesk text-2xl ml-3">
+              {/* <h2 className="space-grotesk text-2xl ml-3">
                 Enthusiast <br /> Hydrogen
-              </h2>
+              </h2> */}
             </motion.div>
           </Link>
           <p className="text-sm leading-relaxed">
