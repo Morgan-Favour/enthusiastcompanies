@@ -38,6 +38,7 @@ const Footer = () => {
                 height={100}
                 src="/footer-logo.png"
                 alt="Logo"
+                className='mb-5'
                 priority
               />
               {/* <h2 className="space-grotesk text-2xl ml-3">
