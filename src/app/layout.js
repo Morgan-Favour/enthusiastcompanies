@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="font-space-grotesk">
+      <body className="font-space-grotesk bg-[#F5EDED] text-eh-black">
         <Navbar />
         {/* <SubHeaderWrapper /> */}
         {children}
