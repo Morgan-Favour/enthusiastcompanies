@@ -16,7 +16,7 @@ const Projects = () => {
             >
                 Projects
             </motion.h2>
-            <p className='max-w-2xl mx-auto mt-4 text-eh-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora praesentium, quibusdam explicabo beatae omnis sed exercitationem nemo est repellendus veritatis totam modi perspiciatis! Corporis similique eum illo quam nesciunt perspiciatis.</p>
+            <p className='max-w-2xl mx-auto mt-4 text-eh-black'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora praesentium, quibusdam explicabo beatae omnis sed exercitationem nemo est repellendus veritatis totam modi perspiciatis! Corporis similique eum illo quam nesciunt perspiciatis.</p>
             <ProjectCard />
         </div>
 
