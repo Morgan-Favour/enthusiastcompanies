@@ -76,7 +76,7 @@ const WhyUs = () => {
               variants={item}
               whileHover={{ scale: 1.03 }}
               transition={{ type: 'spring', stiffness: 200 }}
-              className="bg-eh-white p-6 rounded-2xl shadow-lg"
+              className="bg-eh-white/70 backdrop-blur-md p-6 rounded-2xl shadow-lg"
             >
               <h3 className="text-xl font-semibold text-eh-black mb-2">
                 {data.title}

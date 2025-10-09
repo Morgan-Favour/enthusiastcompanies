@@ -36,14 +36,12 @@ const Footer = () => {
               <Image
                 width={200}
                 height={100}
-                src="/footer-logo.png"q
+                src="/footer-logo.png"
                 alt="Logo"
                 className='mb-5'
                 priority
               />
-              {/* <h2 className="space-grotesk text-2xl ml-3">
-                Enthusiast <br /> Hydrogen
-              </h2> */}
+              
             </motion.div>
           </Link>
           <p className="text-sm leading-relaxed">

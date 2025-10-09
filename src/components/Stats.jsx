@@ -12,7 +12,7 @@ const Stats = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 my-12 md:my-20 p-12 lg:px-20 py-10 shadow-2xl mx-6 md:mx-15 rounded-3xl bg-eh-white"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 my-12 md:my-20 p-12 lg:px-20 py-10 shadow-2xl mx-6 md:mx-15 rounded-3xl bg-eh-white/70 backdrop-blur-md "
       >
         {/* Left Side: Heading + Description */}
         <div className="space-y-6 text-center lg:text-left">

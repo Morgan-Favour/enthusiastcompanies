@@ -1,4 +1,7 @@
-import { Globe, Leaf, Rocket } from 'lucide-react'
+import { Globe, Leaf, Rocket, Cpu, MonitorPlay, Wind, Search, Drill, FlaskRound, Zap, Factory, Mountain, Truck, Home, Handshake, FlaskConical, Building2} from 'lucide-react'
+
+
+
 
 export const projectData = [
     {   
@@ -112,3 +115,88 @@ export const whatWeDoCards = [
         desc: "Many governments worldwide are implementing policies and incentives to promote hydrogen energy as part of their climate action plans."
     },
 ]
+
+export const features = [
+    {
+      id: 'mdr',
+      title: 'Multi Disc Rotary™ Generator (MDR)',
+      desc: 'A compact, high-efficiency rotary generator engineered to convert hydrogen into electricity and heat with modular scalability for industrial and remote deployments.',
+      icon: <Cpu className="w-6 h-6" aria-hidden />,
+    },
+    {
+      id: 'prospect',
+      title: 'Natural Hydrogen Prospecting',
+      desc: 'Aerial & surface sensing stack that locates "Gold Hydrogen™" reservoirs using spectroscopy, lidar and advanced geospatial mapping.',
+      icon: <MonitorPlay className="w-6 h-6" aria-hidden />,
+    },
+    {
+      id: 'integration',
+      title: 'Capture, Purify & Integrate',
+      desc: 'End-to-end capture and purification for safe storage plus grid and microgrid integration—optimized for safety and low lifecycle emissions.',
+      icon: <Wind className="w-6 h-6" aria-hidden />,
+    },
+  ]
+
+  export const steps = [
+    {
+      title: 'Discover',
+      desc: 'We identify natural hydrogen reserves using advanced sensing and geospatial mapping technologies.',
+      icon: <Search className="w-6 h-6 text-cyan-600" />, 
+    },
+    {
+      title: 'Extract',
+      desc: 'Our drilling and capture systems safely extract natural hydrogen while maintaining environmental balance.',
+      icon: <Drill className="w-6 h-6 text-cyan-600" />, 
+    },
+    {
+      title: 'Convert',
+      desc: 'The Multi Disc Rotary™ Generator transforms hydrogen into electricity and heat with exceptional efficiency.',
+      icon: <FlaskRound className="w-6 h-6 text-cyan-600" />, 
+    },
+    {
+      title: 'Power',
+      desc: 'We deliver scalable clean energy for industries, grids, and remote applications.',
+      icon: <Zap className="w-6 h-6 text-cyan-600" />, 
+    },
+  ]
+
+  export const applications = [
+    {
+      title: 'Industrial Power',
+      desc: 'Hydrogen-driven systems to power large-scale industrial operations with clean, efficient energy.',
+      icon: <Factory className="w-6 h-6 text-cyan-600" />, 
+    },
+    {
+      title: 'Remote Energy',
+      desc: 'Reliable, off-grid hydrogen power solutions for remote areas and critical infrastructure.',
+      icon: <Mountain className="w-6 h-6 text-cyan-600" />, 
+    },
+    {
+      title: 'Transportation',
+      desc: 'Fueling the future of mobility through clean hydrogen for heavy transport and logistics.',
+      icon: <Truck className="w-6 h-6 text-cyan-600" />, 
+    },
+    {
+      title: 'Microgrids',
+      desc: 'Decentralized hydrogen power networks designed for communities and resilient energy systems.',
+      icon: <Home className="w-6 h-6 text-cyan-600" />, 
+    },
+  ]
+
+  export const partnerships = [
+    {
+      title: 'Investment & Funding',
+      desc: 'Collaborate on scaling hydrogen power infrastructure and bringing innovative energy systems to market.',
+      icon: <Handshake className="w-6 h-6 text-cyan-400" />, 
+    },
+    {
+      title: 'Research & Development',
+      desc: 'Partner in refining the Multi Disc Rotary™ Generator and advancing hydrogen extraction technologies.',
+      icon: <FlaskConical className="w-6 h-6 text-cyan-400" />, 
+    },
+    {
+      title: 'Infrastructure & Deployment',
+      desc: 'Join our network to implement hydrogen power solutions in industrial and community-scale projects.',
+      icon: <Building2 className="w-6 h-6 text-cyan-400" />, 
+    },
+  ]

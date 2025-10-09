@@ -45,7 +45,7 @@ const ContactUs = () => {
     }
 
     return (
-        <section className="container py-20">
+        <section className="container py-30">
             <div className="mb-12 text-center space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight text-eh-accent">Contact Us</h1>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-4">

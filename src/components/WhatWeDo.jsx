@@ -77,7 +77,7 @@ const WhatWeDo = () => {
         {whatWeDoCards.map((card) => (
           <motion.div
             key={card.id}
-            className="bg-white p-8 space-y-6 w-80 shadow-xl rounded-2xl hover:shadow-2xl transition group"
+            className="bg-eh-white/70 backdrop-blur-md p-8 space-y-6 w-80 shadow-xl rounded-2xl hover:shadow-2xl transition group"
             variants={{
               hidden: { opacity: 0, y: 50 },
               show: { opacity: 1, y: 0 }

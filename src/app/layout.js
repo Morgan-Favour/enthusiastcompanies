@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-space-grotesk">
         <Navbar />
-        <SubHeaderWrapper />
+        {/* <SubHeaderWrapper /> */}
         {children}
         <WhatsAppButton />
         <Footer />

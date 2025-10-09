@@ -22,7 +22,7 @@ const ProjectCard = () => {
                         transitionSpeed={2500}
                         tiltMaxAngleX={10}
                         tiltMaxAngleY={10}
-                        className="bg-white rounded-xl shadow-lg overflow-hidden group"
+                        className="bg-eh-white/70 backdrop-blur-md rounded-xl shadow-lg overflow-hidden group"
                     >
                         {/* Make the whole card clickable */}
                         <Link href={'/projects'} className="block h-full">
