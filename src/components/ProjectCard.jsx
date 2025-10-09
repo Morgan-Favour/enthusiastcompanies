@@ -22,7 +22,7 @@ const ProjectCard = () => {
                         transitionSpeed={2500}
                         tiltMaxAngleX={10}
                         tiltMaxAngleY={10}
-                        className="bg-eh-white/70 backdrop-blur-md rounded-xl shadow-lg overflow-hidden group"
+                        className="bg-slate-800/60 border border-slate-700 shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all rounded-2xl overflow-hidden group"
                     >
                         {/* Make the whole card clickable */}
                         <Link href={'/projects'} className="block h-full">
@@ -36,10 +36,10 @@ const ProjectCard = () => {
                                 />
                                 <div className="p-5 flex flex-col justify-between flex-grow">
                                     <div>
-                                        <h2 className="text-lg font-semibold text-eh-black mb-2 group-hover:text-eh-accent transition">
+                                        <h2 className="text-lg font-semibold text-eh-white mb-2 group-hover:text-eh-accent transition">
                                             {project.projectTitle}
                                         </h2>
-                                        <p className="text-sm text-gray-600 line-clamp-3">
+                                        <p className="text-sm text-white line-clamp-3">
                                             {project.description}
                                         </p>
                                     </div>

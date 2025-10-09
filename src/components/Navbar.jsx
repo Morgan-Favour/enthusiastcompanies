@@ -23,6 +23,8 @@ import { animatePageOut } from "@/utils/animation"
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/power", label: "Enthusiast Power" },
+  { href: "/product", label: "Enthusiast Product" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -38,8 +40,8 @@ const Navbar = () => {
 
   const isActive = (href) =>
     pathname === href
-      ? "text-blue-600 font-semibold"
-      : "text-gray-700 hover:text-blue-600"
+      ? "text-blue-600 text-2xl font-semibold"
+      : "text-white text-2xl hover:text-blue-600"
 
   return (
     <header className="fixed top-0 left-0 w-full bg-eh-white/70 backdrop-blur-md shadow-sm z-50 flex justify-between items-center py-4 px-6 md:px-20">
@@ -79,7 +81,7 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[500px] pl-10 h-full overflow-y-auto backdrop-blr-md bg-eh-black border-none"
+            className="w-full md:w-[500px] pl-10 h-full overflow-y-auto backdrop-blr-md bg-eh-black border-none"
           >
             <SheetTitle>
               <VisuallyHidden>Mobile Menu</VisuallyHidden>

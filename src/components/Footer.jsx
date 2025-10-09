@@ -64,8 +64,8 @@ const Footer = () => {
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <p><strong>PHONE:</strong> <a href="tel:+2344543193">+234 454 3193</a></p>
-            <p><strong>EMAIL:</strong> <a href="mailto:morganfavour85@gmail.com"> morganfavour85@gmail.com</a></p>
+            <p><strong>PHONE:</strong> <a href="tel:+2344543193">+234 567 8910</a></p>
+            <p><strong>EMAIL:</strong> <a href="mailto:someone@gmail.com"> someone@gmail.com</a></p>
             <p><strong>ADDRESS:</strong> <a href="https://www.google.com/maps?q=Enthusiast+Hydrogen+Nigeria" target="_blank"rel="noopener noreferrer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eum! Delectus sint sed tempora minima eveniet praesentium impedit expedita, obcaecati veritatis non ex, quaerat explicabo vero cupiditate nam quibusdam nobis.</a></p>
           </motion.div>
         </motion.div>

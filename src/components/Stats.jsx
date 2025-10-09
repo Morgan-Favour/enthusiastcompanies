@@ -6,20 +6,20 @@ import { statsData } from '../constants/index.js'
 
 const Stats = () => {
   return (
-    <section className='w-full flex items-center justify-center'>
+    <section className='w-full flex items-center justify-center bg-white'>
       <motion.div
         initial={{ opacity: 0, x: 200 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 my-12 md:my-20 p-12 lg:px-20 py-10 shadow-2xl mx-6 md:mx-15 rounded-3xl bg-eh-white/70 backdrop-blur-md "
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 my-12 md:my-20 p-12 lg:px-20 py-10 shadow-2xl mx-6 md:mx-15 rounded-3xl bg-gradient-to-b from-slate-900 to-slate-800 backdrop-blur-md "
       >
         {/* Left Side: Heading + Description */}
         <div className="space-y-6 text-center lg:text-left">
-          <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-eh-black">
+          <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-eh-white">
             Let's build something together.
           </h1>
-          <p className="text-base md:text-lg text-eh-black leading-relaxed">
+          <p className="text-base md:text-lg text-eh-white leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iure
             consequatur debitis assumenda maxime, minima minus cupiditate
             provident vero animi. Ullam quam rem sint repudiandae unde, provident
@@ -45,7 +45,7 @@ const Stats = () => {
                   suffix={stats.suffix}
                 />
               </h2>
-              <p className="text-sm md:text-base text-gray-700">{stats.title}</p>
+              <p className="text-sm md:text-base text-white">{stats.title}</p>
             </motion.div>
           ))}
         </div>

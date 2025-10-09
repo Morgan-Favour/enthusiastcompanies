@@ -77,17 +77,17 @@ const WhatWeDo = () => {
         {whatWeDoCards.map((card) => (
           <motion.div
             key={card.id}
-            className="bg-eh-white/70 backdrop-blur-md p-8 space-y-6 w-80 shadow-xl rounded-2xl hover:shadow-2xl transition group"
+            className="bg-slate-800/60 border border-slate-700 shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all rounded-2xl p-8 space-y-6 w-80 hover:shadow-2xl group"
             variants={{
               hidden: { opacity: 0, y: 50 },
               show: { opacity: 1, y: 0 }
             }}
           >
             <div className="flex justify-center">{card.icon}</div>
-            <h2 className="text-2xl font-bold text-eh-black group-hover:text-eh-accent transition">
+            <h2 className="text-2xl font-bold text-eh-white group-hover:text-eh-accent transition">
               {card.title}
             </h2>
-            <p className="text-gray-600">{card.desc}</p>
+            <p className="text-white">{card.desc}</p>
           </motion.div>
         ))}
       </motion.div>

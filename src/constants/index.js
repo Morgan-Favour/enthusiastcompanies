@@ -200,3 +200,21 @@ export const features = [
       icon: <Building2 className="w-6 h-6 text-cyan-400" />, 
     },
   ]
+  
+  export const productCards = [
+    {
+      title: 'Hydrogen Discovery & Prospecting',
+      desc: 'Hydrogen sensors, mapping tech (LDLARS, LIDAR) to find natural hydrogen.',
+      icon: <Search className="w-6 h-6 text-cyan-600" />,
+    },
+    {
+      title: 'Power & Conversion Systems',
+      desc: 'Multi Disc Rotary™ Generator (MDR) to convert hydrogen into electricity and heat.',
+      icon: <Zap className="w-6 h-6 text-cyan-600" />,
+    },
+    {
+      title: 'Chemical Products & Derivatives',
+      desc: 'Hydrogen capture, purification, storage, and integration solutions.',
+      icon: <FlaskRound className="w-6 h-6 text-cyan-600" />,
+    }
+  ]

@@ -9,7 +9,7 @@ import WhyUs from "@/components/WhyUs";
 
 export default function Home() {
   return (
-    <div className="bg-[#1c1c1c] w-full overflow-hidden">
+    <div className="bg-gradient-to-b from-slate-900 to-slate-800 w-full overflow-hidden">
       <Hero />
       <WhatWeDo />
       <Stats />
