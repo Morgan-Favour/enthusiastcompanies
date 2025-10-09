@@ -44,7 +44,7 @@ const WhatWeDo = () => {
 
       {/* Intro text */}
       <motion.div
-        className="w-full md:w-2/3 h-[100px] mx-auto space-y-6 text-lg text-eh-black"
+        className="w-full md:w-2/3 h-[100px] mx-auto space-y-6 text-lg text-eh-white"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.3 }}

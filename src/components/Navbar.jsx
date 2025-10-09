@@ -57,7 +57,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <nav className="hidden md:block text-eh-accent">
+      {/* <nav className="hidden md:block text-eh-accent">
         <NavigationMenu>
           <NavigationMenuList className="flex gap-8">
             {links.map(({ href, label }) => (
@@ -67,26 +67,26 @@ const Navbar = () => {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-      </nav>
+      </nav> */}
 
       {/* Mobile Menu */}
-      <div className="md:hidden">
+      <div className="flex">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <button aria-label="Open menu">
-              <Menu className="h-7 w-7 text-eh-accent" />
+              <Menu className="h-10 w-10 text-eh-accent" />
             </button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-64 pl-10 h-full overflow-y-auto backdrop-blur-md bg-white/70"
+            className="w-[500px] pl-10 h-full overflow-y-auto backdrop-blr-md bg-eh-black border-none"
           >
             <SheetTitle>
               <VisuallyHidden>Mobile Menu</VisuallyHidden>
             </SheetTitle>
             <nav className="flex flex-col gap-4 mt-8">
               {links.map(({ href, label }) => (
-                <TransitionLink key={href} href={href} label={label} className={isActive(href)} handleClick={handleClick} />
+                <TransitionLink key={href} href={href} label={label} className={`${isActive(href)}`} handleClick={handleClick} />
               ))}
             </nav>
           </SheetContent>
