@@ -24,11 +24,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-space-grotesk bg-[#F5EDED] text-eh-black">
-        <Navbar />
-        {/* <SubHeaderWrapper /> */}
         {children}
-        <WhatsAppButton />
-        <Footer />
       </body>
     </html>
   );

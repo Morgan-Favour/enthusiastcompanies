@@ -71,11 +71,11 @@ const Navbar = () => {
         </NavigationMenu>
       </nav> */}
 
-      {/* Mobile Menu */}
-      <div className="flex">
+      {/* Mobile/Universal Menu */}
+      <div className="flex w-full">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
-            <button aria-label="Open menu">
+            <button aria-label="Open menu" className="ml-auto">
               <Menu className="h-10 w-10 text-eh-accent" />
             </button>
           </SheetTrigger>
@@ -84,16 +84,14 @@ const Navbar = () => {
             className="w-full md:w-[500px] pl-10 h-full overflow-y-auto backdrop-blr-md bg-eh-black border-none"
           >
             <SheetTitle>
-              <VisuallyHidden>Mobile Menu</VisuallyHidden>
+              <VisuallyHidden>Menu</VisuallyHidden>
             </SheetTitle>
             <nav className="flex flex-col gap-4 mt-8">
               {links.map(({ href, label }) => (
-                <TransitionLink key={href} href={href} label={label} className={`${isActive(href)}`} handleClick={handleClick} />
+                <TransitionLink key={href} href={href} label={label} className={`${isActive(href)}`} handleClick={() => setOpen(false)} />
               ))}
             </nav>
           </SheetContent>
-
-
         </Sheet>
       </div>
     </header>
