@@ -1,7 +1,5 @@
-
 import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
-
 import Footer from "@/components/Footer";
 import SubHeaderWrapper from "@/components/SubHeaderWrapper";
 import WhatsAppButton from "@/components/WhatsappButton";
@@ -24,7 +22,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-space-grotesk bg-[#F5EDED] text-eh-black">
+        <Navbar />
         {children}
+        <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

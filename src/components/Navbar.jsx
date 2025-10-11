@@ -22,6 +22,7 @@ import { animatePageOut } from "@/utils/animation"
 
 const links = [
   { href: "/", label: "Home" },
+  {href: "/hydrogen", label: "Enthusiast Hydrogen" },
   { href: "/about", label: "About" },
   { href: "/power", label: "Enthusiast Power" },
   { href: "/product", label: "Enthusiast Product" },
@@ -72,7 +73,7 @@ const Navbar = () => {
       </nav> */}
 
       {/* Mobile/Universal Menu */}
-      <div className="flex w-full">
+      <div className="flex w-[50%]">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <button aria-label="Open menu" className="ml-auto">

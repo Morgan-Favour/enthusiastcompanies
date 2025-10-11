@@ -1,4 +1,4 @@
-import { Globe, Leaf, Rocket, Cpu, MonitorPlay, Wind, Search, Drill, FlaskRound, Zap, Factory, Mountain, Truck, Home, Handshake, FlaskConical, Building2} from 'lucide-react'
+import { Globe, Globe2, Leaf, Rocket, Cpu, MonitorPlay, Wind, Search, Drill, FlaskRound, Zap, Factory, Mountain, Truck, Home, Handshake, FlaskConical, Building2, Atom, Battery, Package, Recycle} from 'lucide-react'
 
 
 
@@ -217,4 +217,42 @@ export const features = [
       desc: 'Hydrogen capture, purification, storage, and integration solutions.',
       icon: <FlaskRound className="w-6 h-6 text-cyan-600" />,
     }
+  ]
+  export const divisions = [
+    {
+      name: 'Enthusiast Hydrogen',
+      desc: 'Revolutionizing clean hydrogen energy systems through advanced Multi Disc Rotary™ generator technology.',
+      icon: <Atom className="w-8 h-8 text-cyan-400" />,
+      link: '/hydrogen',
+    },
+    {
+      name: 'Enthusiast Power',
+      desc: 'Delivering innovative, sustainable power generation and storage solutions for global energy needs.',
+      icon: <Battery className="w-8 h-8 text-cyan-400" />,
+      link: '/power',
+    },
+    {
+      name: 'Enthusiast Products',
+      desc: 'Creating next-generation smart and industrial products that integrate innovation with sustainability.',
+      icon: <Package className="w-8 h-8 text-cyan-400" />,
+      link: '/products',
+    },
+  ]
+
+  export const points = [
+    {
+      icon: <Globe2 className="w-6 h-6 text-cyan-400" />,
+      title: 'Global Impact',
+      desc: 'Our technologies are designed to solve real-world challenges and contribute to a cleaner global ecosystem.',
+    },
+    {
+      icon: <Rocket className="w-6 h-6 text-cyan-400" />,
+      title: 'Advanced Technology',
+      desc: 'Through research and engineering, we develop scalable innovations that accelerate the clean energy revolution.',
+    },
+    {
+      icon: <Recycle className="w-6 h-6 text-cyan-400" />,
+      title: 'Sustainable Future',
+      desc: 'Every Enthusiast project is guided by sustainability — from hydrogen systems to eco-friendly consumer products.',
+    },
   ]
