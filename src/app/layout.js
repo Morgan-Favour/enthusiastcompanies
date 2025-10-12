@@ -8,7 +8,7 @@ export const metadata = {
   title: "Enthusiast Hydrogen Company",
   description: "Leading innovator in hydrogen technology solutions",
   icons: {
-    icon: "/logo.png", // Your company logo as favicon
+    icon: "/companies-img.png", // Your company logo as favicon
   },
 };
 

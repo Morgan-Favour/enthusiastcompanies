@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { MonitorPlay, Cpu, Wind, Sparkles } from 'lucide-react'
 import { features } from '../constants/index.js'
 
-export default function TechnologySection() {
+export default function   TechnologySection() {
   
   return (
     <section
@@ -34,8 +34,8 @@ export default function TechnologySection() {
           <Card className="absolute -bottom-8 left-6 w-72 bg-gradient-to-r from-white/90 to-white/70 backdrop-blur-md">
             <CardContent className="p-4">
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-md bg-cyan-50">
-                  <Sparkles className="w-5 h-5 text-cyan-600" />
+                <div className="p-2 rounded-md bg-eh-power-red">
+                  <Sparkles className="w-5 h-5 text-eh-white" />
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-slate-900">Prototype Status</h4>
@@ -82,7 +82,8 @@ export default function TechnologySection() {
                 transition={{ delay: 0.12 * i, duration: 0.55 }}
                 className="flex gap-4 items-start bg-gradient-to-r from-slate-50 to-white p-4 rounded-2xl shadow-sm"
               >
-                <div className="flex-none w-11 h-11 rounded-lg bg-cyan-50 flex items-center justify-center text-cyan-700">
+                <div className="flex-none w-11 h-11 rounded-lg bg-eh-power-red
+                 flex items-center justify-center text-cyan-700">
                   {feature.icon}
                 </div>
                 <div className="min-w-0">
@@ -94,7 +95,7 @@ export default function TechnologySection() {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild>
+            <Button className='bg-transparent border border-eh-power-red hover:bg-eh-power-red text-eh-power-red hover:text-white px-6 py-3 rounded-3xl font-semibold transition' asChild>
               <a href="/contact" className="inline-flex items-center gap-2">
                 Partner With Us
               </a>
@@ -111,7 +112,7 @@ export default function TechnologySection() {
 
       {/* subtle divider */}
       <div className="mt-12 flex justify-center">
-        <span className="w-28 h-0.5 bg-gradient-to-r from-cyan-400 to-slate-300 rounded-full block" />
+        <span className="w-28 h-0.5 bg-gradient-to-r from-eh-power-red to-transparent rounded-full block" />
       </div>
     </section>
   )

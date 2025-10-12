@@ -22,7 +22,7 @@ const PowerHero = () => {
   }, [])
 
   return (
-    <section className="relative flex flex-col items-center justify-center h-[80vh] text-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center h-[100vh] text-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden pt-[00px]">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-cover bg-center opacity-20" />
       <video
@@ -60,7 +60,7 @@ const PowerHero = () => {
           {/* <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition">
             Learn More
           </button> */}
-          <button className="bg-transparent border border-cyan-400 hover:bg-cyan-500/20 text-cyan-300 px-6 py-3 rounded-xl font-semibold transition">
+          <button className="bg-transparent border border-eh-power-red hover:bg-eh-power-red text-white px-6 py-3 rounded-3xl font-semibold transition">
             Partner With Us
           </button>
         </div>

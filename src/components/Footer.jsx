@@ -36,7 +36,7 @@ const Footer = () => {
               <Image
                 width={200}
                 height={100}
-                src="/footer-logo.png"
+                src="/companies-logo.png"
                 alt="Logo"
                 className='mb-5'
                 priority

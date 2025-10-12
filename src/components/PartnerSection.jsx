@@ -11,9 +11,9 @@ export default function PartnerSection() {
   
 
   return (
-    <section className="relative bg-gradient-to-b from-slate-900 to-slate-800 py-20 px-6 text-white">
+    <section className="relative bg-eh-power-black py-20 px-6 text-white">
       <div className="max-w-6xl mx-auto text-center">
-        <Badge className="mb-4 bg-cyan-600/20 text-cyan-400 border-cyan-400/40">Partnerships</Badge>
+        <Badge className="mb-4 bg-eh-power-red text-eh-white border-eh-power-red text-lg p-3 rounded-xl">Partnerships</Badge>
 
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
@@ -30,7 +30,7 @@ export default function PartnerSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="mt-3 text-slate-300 max-w-2xl mx-auto"
+          className="mt-3 text-white max-w-2xl mx-auto"
         >
           We believe that collaboration fuels innovation. Join us in building a sustainable hydrogen future through investment, research, and global energy partnerships.
         </motion.p>
@@ -44,10 +44,10 @@ export default function PartnerSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <Card className="bg-slate-800/60 border border-slate-700 shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all rounded-2xl h-full text-left">
+              <Card className="bg-transparent backdrop-blur-3xl border border-eh-power-red shadow-md hover:shadow-eh-power-red hover:-translate-y-1 transition-all rounded-2xl h-full text-left">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-500/10">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-eh-power-red text-white">
                       {partnership.icon}
                     </div>
                   </div>
@@ -64,17 +64,17 @@ export default function PartnerSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-16"
+          className="mt-16 "
         >
-          <Button size="lg" asChild>
-            <a href="#contact" className="text-eh-white font-semibold">
+          <Button size="lg" className='bg-transparent border border-eh-power-red hover:bg-eh-power-red text-white px-6 py-3 rounded-3xl font-semibold transition' asChild>
+            <a href="#contact" className="text-eh-white font-semibold ">
               Become a Partner
             </a>
           </Button>
         </motion.div>
 
         <div className="mt-16 flex justify-center">
-          <span className="w-28 h-0.5 bg-gradient-to-r from-cyan-400 to-slate-500 rounded-full block" />
+          <span className="w-28 h-0.5 bg-gradient-to-r from-eh-power-red to-eh-power-black rounded-full block" />
         </div>
       </div>
     </section>

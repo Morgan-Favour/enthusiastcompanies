@@ -121,19 +121,19 @@ export const features = [
       id: 'mdr',
       title: 'Multi Disc Rotary™ Generator (MDR)',
       desc: 'A compact, high-efficiency rotary generator engineered to convert hydrogen into electricity and heat with modular scalability for industrial and remote deployments.',
-      icon: <Cpu className="w-6 h-6" aria-hidden />,
+      icon: <Cpu className="w-6 h-6 text-eh-white" aria-hidden />,
     },
     {
       id: 'prospect',
       title: 'Natural Hydrogen Prospecting',
       desc: 'Aerial & surface sensing stack that locates "Gold Hydrogen™" reservoirs using spectroscopy, lidar and advanced geospatial mapping.',
-      icon: <MonitorPlay className="w-6 h-6" aria-hidden />,
+      icon: <MonitorPlay className="w-6 h-6 text-eh-white" aria-hidden />,
     },
     {
       id: 'integration',
       title: 'Capture, Purify & Integrate',
       desc: 'End-to-end capture and purification for safe storage plus grid and microgrid integration—optimized for safety and low lifecycle emissions.',
-      icon: <Wind className="w-6 h-6" aria-hidden />,
+      icon: <Wind className="w-6 h-6 text-eh-white" aria-hidden />,
     },
   ]
 
@@ -141,22 +141,22 @@ export const features = [
     {
       title: 'Discover',
       desc: 'We identify natural hydrogen reserves using advanced sensing and geospatial mapping technologies.',
-      icon: <Search className="w-6 h-6 text-cyan-600" />, 
+      icon: <Search className="w-6 h-6 text-eh-white  " />, 
     },
     {
       title: 'Extract',
       desc: 'Our drilling and capture systems safely extract natural hydrogen while maintaining environmental balance.',
-      icon: <Drill className="w-6 h-6 text-cyan-600" />, 
+      icon: <Drill className="w-6 h-6 text-eh-white " />, 
     },
     {
       title: 'Convert',
       desc: 'The Multi Disc Rotary™ Generator transforms hydrogen into electricity and heat with exceptional efficiency.',
-      icon: <FlaskRound className="w-6 h-6 text-cyan-600" />, 
+      icon: <FlaskRound className="w-6 h-6 text-eh-white  " />, 
     },
     {
       title: 'Power',
       desc: 'We deliver scalable clean energy for industries, grids, and remote applications.',
-      icon: <Zap className="w-6 h-6 text-cyan-600" />, 
+      icon: <Zap className="w-6 h-6 text-eh-white " />, 
     },
   ]
 
@@ -164,22 +164,22 @@ export const features = [
     {
       title: 'Industrial Power',
       desc: 'Hydrogen-driven systems to power large-scale industrial operations with clean, efficient energy.',
-      icon: <Factory className="w-6 h-6 text-cyan-600" />, 
+      icon: <Factory className="w-6 h-6 text-eh-white" />, 
     },
     {
       title: 'Remote Energy',
       desc: 'Reliable, off-grid hydrogen power solutions for remote areas and critical infrastructure.',
-      icon: <Mountain className="w-6 h-6 text-cyan-600" />, 
+      icon: <Mountain className="w-6 h-6 text-eh-white" />, 
     },
     {
       title: 'Transportation',
       desc: 'Fueling the future of mobility through clean hydrogen for heavy transport and logistics.',
-      icon: <Truck className="w-6 h-6 text-cyan-600" />, 
+      icon: <Truck className="w-6 h-6 text-eh-white" />, 
     },
     {
       title: 'Microgrids',
       desc: 'Decentralized hydrogen power networks designed for communities and resilient energy systems.',
-      icon: <Home className="w-6 h-6 text-cyan-600" />, 
+      icon: <Home className="w-6 h-6 text-eh-white" />, 
     },
   ]
 
@@ -187,17 +187,17 @@ export const features = [
     {
       title: 'Investment & Funding',
       desc: 'Collaborate on scaling hydrogen power infrastructure and bringing innovative energy systems to market.',
-      icon: <Handshake className="w-6 h-6 text-cyan-400" />, 
+      icon: <Handshake className="w-6 h-6" />, 
     },
     {
       title: 'Research & Development',
       desc: 'Partner in refining the Multi Disc Rotary™ Generator and advancing hydrogen extraction technologies.',
-      icon: <FlaskConical className="w-6 h-6 text-cyan-400" />, 
+      icon: <FlaskConical className="w-6 h-6 " />, 
     },
     {
       title: 'Infrastructure & Deployment',
       desc: 'Join our network to implement hydrogen power solutions in industrial and community-scale projects.',
-      icon: <Building2 className="w-6 h-6 text-cyan-400" />, 
+      icon: <Building2 className="w-6 h-6 " />, 
     },
   ]
   

@@ -1,3 +1,4 @@
+import AboutSection from "@/components/AboutSection";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Stats from "@/components/Stats";
@@ -11,6 +12,7 @@ export default function Hydrogen() {
   return (
     <div className="bg-gradient-to-b from-slate-900 to-slate-800 w-full overflow-hidden">
       <Hero />
+      <AboutSection    />
       <WhatWeDo />
       <Stats />
       <Projects />
