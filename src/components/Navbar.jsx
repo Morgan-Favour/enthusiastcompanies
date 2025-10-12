@@ -5,15 +5,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu"
-import {
   Sheet,
   SheetContent,
   SheetTrigger,
-  SheetTitle
+  SheetTitle,
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
@@ -22,22 +17,24 @@ import { animatePageOut } from "@/utils/animation"
 
 const links = [
   { href: "/", label: "Home" },
-  {href: "/hydrogen", label: "Enthusiast Hydrogen" },
-  { href: "/about", label: "About" },
+  { href: "/hydrogen", label: "Enthusiast Hydrogen" },
   { href: "/power", label: "Enthusiast Power" },
   { href: "/product", label: "Enthusiast Product" },
   { href: "/contact", label: "Contact" },
 ]
 
+const logoMap = {
+  "/": "/companies-logo.png",
+  "/hydrogen": "/logo.png",
+  "/power": "/power-logo.png",
+  "/product": "/product-logo.png",
+}
+
 const Navbar = () => {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
-  const handleClick = () => {
-    if (pathname !== href) {
-      animatePageOut(href, router)
-    }
-  }
+  const logoSrc = logoMap[pathname] || "/companies-logo.png"
 
   const isActive = (href) =>
     pathname === href
@@ -52,32 +49,19 @@ const Navbar = () => {
           <Image
             width={120}
             height={100}
-            src="/logo.png"
+            src={logoSrc}
             alt="Logo"
             priority
           />
         </div>
       </Link>
 
-      {/* Desktop Menu */}
-      {/* <nav className="hidden md:block text-eh-accent">
-        <NavigationMenu>
-          <NavigationMenuList className="flex gap-8">
-            {links.map(({ href, label }) => (
-              <NavigationMenuItem key={href}>
-                <TransitionLink href={href} label={label} className={isActive(href)} handleClick={handleClick} />
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
-      </nav> */}
-
       {/* Mobile/Universal Menu */}
       <div className="flex w-[50%]">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <button aria-label="Open menu" className="ml-auto">
-              <Menu className="h-10 w-10 text-eh-accent" />
+              <Menu className="h-10 w-10 text-eh-black" />
             </button>
           </SheetTrigger>
           <SheetContent
@@ -89,7 +73,13 @@ const Navbar = () => {
             </SheetTitle>
             <nav className="flex flex-col gap-4 mt-8">
               {links.map(({ href, label }) => (
-                <TransitionLink key={href} href={href} label={label} className={`${isActive(href)}`} handleClick={() => setOpen(false)} />
+                <TransitionLink
+                  key={href}
+                  href={href}
+                  label={label}
+                  className={isActive(href)}
+                  handleClick={() => setOpen(false)}
+                />
               ))}
             </nav>
           </SheetContent>
