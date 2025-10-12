@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { points} from "../constants/index.js"
 
 export default function InnovationSection() {
   
