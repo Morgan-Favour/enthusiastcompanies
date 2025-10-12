@@ -256,3 +256,17 @@ export const features = [
       desc: 'Every Enthusiast project is guided by sustainability — from hydrogen systems to eco-friendly consumer products.',
     },
   ]
+  export const timeline = [
+    {
+      year: 'Early 2000s',
+      text: `Mr. Peck began investigating hydrogen as a potential energy source. One of his early inventions, inspired by Felix Wankel's rotary engine concepts, required a continuous hydrogen feed — something unavailable at the time. Limited storage options and high costs forced him to shelve the project for nearly a decade, though his passion for research and innovation never stopped.`,
+    },
+    {
+      year: '2017',
+      text: `Dr. Roger Billings challenged Mr. Peck to modify his design using Nikola Tesla’s turbine principles to improve efficiency — but warned, “There is not enough hydrogen on earth to run it.” This challenge reignited Mr. Peck’s pursuit of a breakthrough.`,
+    },
+    {
+      year: '2021',
+      text: `Dr. Billings once again challenged Mr. Peck — this time, to create something entirely of his own vision. That moment became the turning point, leading to a new era of discovery that laid the foundation for Enthusiast Hydrogen and its groundbreaking technologies.`,
+    },
+  ]

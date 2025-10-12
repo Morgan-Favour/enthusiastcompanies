@@ -20,7 +20,7 @@ export default function InnovationSection() {
           className="relative rounded-2xl overflow-hidden shadow-xl"
         >
           <Image
-            src="/mocks/innovation-lab.jpg"
+            src="/innovation-lab.png"
             alt="Innovation and Research Lab"
             width={600}
             height={400}
@@ -48,10 +48,7 @@ export default function InnovationSection() {
             viewport={{ once: true }}
             className="text-slate-300 mb-8 leading-relaxed"
           >
-            At Enthusiast Company LLC, innovation isn’t just a goal — it’s our
-            identity. From hydrogen breakthroughs to smart power networks and
-            sustainable products, we’re shaping the future of global energy and
-            technology.
+            Our 20th anniversary in 2025 is proving to be exciting. We're publicly launching our biggest projects to date - Enthusiast Hydrogen Corporation; Enthusiast Power Corporation; and Enthusiast Products Corporation. These entities are working to safely locate, develop, and produce natural hydrogen resources for energy, heat, and industrial feedstock products.
           </motion.p>
 
           <div className="space-y-6">
