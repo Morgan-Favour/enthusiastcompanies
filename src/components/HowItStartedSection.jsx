@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import {timeline} from "../constants/index.js"
+import { timeline } from '../constants/index.js'
 
 export default function HowItStartedSection() {
   const ref = useRef(null)
@@ -13,14 +13,13 @@ export default function HowItStartedSection() {
 
   const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
 
-  
-
   return (
     <section
       ref={ref}
       className="relative bg-gradient-to-b from-slate-900 to-slate-800 py-24 px-6 text-white overflow-hidden"
     >
       <div className="max-w-5xl mx-auto">
+        {/* Header */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,13 +41,13 @@ export default function HowItStartedSection() {
         </motion.p>
 
         <div className="relative">
-          {/* Static center line */}
-          <div className="absolute left-1/2 top-0 h-full w-[2px] bg-slate-700 transform -translate-x-1/2" />
+          {/* Static center line — centered on md+, left on mobile */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] bg-slate-700 transform md:-translate-x-1/2 rounded-full" />
 
           {/* Animated glowing line */}
           <motion.div
             style={{ height: lineHeight }}
-            className="absolute left-1/2 top-0 w-[2px] bg-gradient-to-b from-cyan-400 to-transparent transform -translate-x-1/2"
+            className="absolute left-4 md:left-1/2 top-0 w-[2px] bg-gradient-to-b from-cyan-400 to-transparent transform md:-translate-x-1/2"
           />
 
           <div className="space-y-20">
@@ -65,10 +64,13 @@ export default function HowItStartedSection() {
                     isLeft ? 'md:justify-start' : 'md:justify-end'
                   }`}
                 >
+                  {/* Text block */}
                   <div
                     className={`md:w-1/2 ${
-                      isLeft ? 'md:pr-10 text-right' : 'md:pl-10 text-left'
-                    }`}
+                      isLeft
+                        ? 'md:pr-10 md:text-right'
+                        : 'md:pl-10 md:text-left'
+                    } text-left pl-10 md:pl-0`}
                   >
                     <h3 className="text-xl font-semibold text-cyan-400 mb-2">
                       {item.year}
@@ -78,8 +80,8 @@ export default function HowItStartedSection() {
                     </p>
                   </div>
 
-                  {/* Animated Dot */}
-                  <div className="absolute left-1/2 w-5 h-5 bg-cyan-400 rounded-full shadow-[0_0_20px_5px_rgba(34,211,238,0.5)] animate-pulse transform -translate-x-1/2" />
+                  {/* Glowing Dot */}
+                  <div className="absolute left-4 md:left-1/2 w-5 h-5 bg-cyan-400 rounded-full shadow-[0_0_20px_5px_rgba(34,211,238,0.5)] animate-pulse transform md:-translate-x-1/2" />
                 </motion.div>
               )
             })}
