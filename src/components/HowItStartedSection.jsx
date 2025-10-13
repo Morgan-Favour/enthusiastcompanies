@@ -16,16 +16,16 @@ export default function HowItStartedSection() {
   return (
     <section
       ref={ref}
-      className="relative bg-gradient-to-b from-slate-900 to-slate-800 py-24 px-6 text-white overflow-hidden"
+      className="relative bg-gradient-to-b from-[var(--color-eh-power-black)] via-black to-[#1a1a1a] py-24 px-6 text-[var(--color-eh-white)] overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto relative">
         {/* Header */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center mb-4"
+          className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-eh-power-red)]"
         >
           How It Started
         </motion.h2>
@@ -35,22 +35,22 @@ export default function HowItStartedSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-slate-300 text-center mb-16 max-w-3xl mx-auto leading-relaxed"
+          className="text-gray-300 text-center mb-16 max-w-3xl mx-auto leading-relaxed"
         >
           A story of persistence, inspiration, and innovation — tracing the origins of Enthusiast Hydrogen from one man’s vision to a company reshaping the future of energy.
         </motion.p>
 
         <div className="relative">
-          {/* Static center line — centered on md+, left on mobile */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] bg-slate-700 transform md:-translate-x-1/2 rounded-full" />
+          {/* Static center line */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] bg-gray-800 transform md:-translate-x-1/2 rounded-full" />
 
-          {/* Animated glowing line */}
+          {/* Animated glowing energy line */}
           <motion.div
             style={{ height: lineHeight }}
-            className="absolute left-4 md:left-1/2 top-0 w-[2px] bg-gradient-to-b from-cyan-400 to-transparent transform md:-translate-x-1/2"
+            className="absolute left-4 md:left-1/2 top-0 w-[2px] bg-gradient-to-b from-[var(--color-eh-power-red)] via-[var(--color-eh-power-yellow)] to-transparent transform md:-translate-x-1/2 rounded-full"
           />
 
-          <div className="space-y-20">
+          <div className="space-y-20 relative z-10">
             {timeline.map((item, i) => {
               const isLeft = i % 2 === 0
               return (
@@ -72,22 +72,26 @@ export default function HowItStartedSection() {
                         : 'md:pl-10 md:text-left'
                     } text-left pl-10 md:pl-0`}
                   >
-                    <h3 className="text-xl font-semibold text-cyan-400 mb-2">
+                    <h3 className="text-xl font-semibold text-[var(--color-eh-power-red)] mb-2">
                       {item.year}
                     </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">
+                    <p className="text-gray-400 text-sm leading-relaxed">
                       {item.text}
                     </p>
                   </div>
 
-                  {/* Glowing Dot */}
-                  <div className="absolute left-4 md:left-1/2 w-5 h-5 bg-cyan-400 rounded-full shadow-[0_0_20px_5px_rgba(34,211,238,0.5)] animate-pulse transform md:-translate-x-1/2" />
+                  {/* Glowing energy node */}
+                  <div className="absolute left-4 md:left-1/2 w-5 h-5 bg-[var(--color-eh-power-red)] rounded-full shadow-[0_0_25px_8px_rgba(255,0,0,0.45)] animate-pulse transform md:-translate-x-1/2 border-2 border-[var(--color-eh-power-yellow)]" />
                 </motion.div>
               )
             })}
           </div>
         </div>
       </div>
+
+      {/* Ambient red glow background */}
+      <div className="absolute top-0 left-1/2 w-[600px] h-[600px] bg-[var(--color-eh-power-red)]/15 rounded-full blur-3xl -translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[var(--color-eh-power-yellow)]/10 rounded-full blur-3xl pointer-events-none" />
     </section>
   )
 }

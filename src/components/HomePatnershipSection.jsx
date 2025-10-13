@@ -2,67 +2,92 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { partnerships } from '../constants/index.js'
 
-const HomePartnershipSection = () => {
+export default function PartnerSection() {
   return (
-    <section className="relative bg-gradient-to-b from-slate-800 to-slate-900 text-white py-24 px-6 overflow-hidden">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        {/* Text section */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+    <section className="relative bg-gradient-to-b from-black via-eh-power-black to-[#1a1a1a] py-24 px-6 text-white overflow-hidden">
+      {/* Background glow accents */}
+      <div className="absolute top-1/3 -left-20 w-[400px] h-[400px] bg-eh-power-red/10 blur-[120px] rounded-full" />
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-eh-power-yellow/10 blur-[100px] rounded-full" />
+
+      <div className="max-w-6xl mx-auto text-center relative z-10">
+        <Badge className="mb-6 bg-eh-power-red text-eh-white border-eh-power-red text-lg px-4 py-2 rounded-xl shadow-[0_0_10px_rgba(230,50,61,0.4)]">
+          Partnerships
+        </Badge>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-extrabold text-white"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-cyan-400">
-            Partner with Enthusiast
-          </h2>
-          <p className="text-slate-300 mb-6 leading-relaxed">
-            At Enthusiast Company LLC, we believe true innovation happens when
-            bright minds come together. Whether you are an investor, researcher,
-            or organization looking to scale sustainable technology, our door is
-            open.
-          </p>
-          <p className="text-slate-400 mb-10 leading-relaxed">
-            We collaborate with governments, industries, and innovators to
-            develop breakthrough hydrogen, power, and smart product solutions
-            for the next century. Join us in building a cleaner, smarter world.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Button
-              size="lg"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold"
-              asChild
+          Partner With <span className="text-eh-power-red">Enthusiast Hydrogen Power</span>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className="mt-4 text-slate-300 max-w-2xl mx-auto leading-relaxed"
+        >
+          Collaboration fuels innovation. Join us in building a sustainable hydrogen future through
+          investment, research, and global energy partnerships.
+        </motion.p>
+
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {partnerships.map((partnership, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <a href="/contact">Become a Partner</a>
-            </Button>
-            
-          </div>
-        </motion.div>
+              <Card className="bg-gradient-to-b from-[#1f1f1f]/70 to-eh-power-black/70 border border-eh-power-red/50 hover:border-eh-power-red transition-all rounded-2xl h-full text-left shadow-md hover:shadow-[0_0_20px_rgba(230,50,61,0.2)] hover:-translate-y-1 backdrop-blur-xl">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-5">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-eh-power-red text-white shadow-[0_0_12px_rgba(230,50,61,0.5)]">
+                      {partnership.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {partnership.title}
+                  </h3>
+                  <p className="text-sm text-slate-300">{partnership.desc}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
 
-        {/* Image section */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative"
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="mt-16"
         >
-          <img
-            src="/home-patnership-img.png"
-            alt="Partnership and Collaboration"
-            className="rounded-2xl shadow-2xl object-cover w-full h-[400px]"
-          />
-          {/* subtle glow */}
-          <div className="absolute inset-0 rounded-2xl bg-cyan-500/10 blur-2xl -z-10" />
+          <Button
+            size="lg"
+            className="bg-transparent border border-eh-power-red hover:bg-eh-power-red text-white px-6 py-3 rounded-3xl font-semibold transition-all hover:shadow-[0_0_20px_rgba(230,50,61,0.4)]"
+            asChild
+          >
+            <a href="#contact" className="text-eh-white font-semibold">
+              Become a Partner
+            </a>
+          </Button>
         </motion.div>
-      </div>
 
-      {/* background glow accent */}
-      <div className="absolute -bottom-32 right-1/2 translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl" />
+        <div className="mt-16 flex justify-center">
+          <span className="w-28 h-0.5 bg-gradient-to-r from-eh-power-red to-eh-power-yellow rounded-full block" />
+        </div>
+      </div>
     </section>
   )
 }
-
-export default HomePartnershipSection

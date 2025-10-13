@@ -42,10 +42,7 @@ export default function HomeHero() {
       x: direction > 0 ? 200 : -200,
       opacity: 0,
     }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
+    center: { x: 0, opacity: 1 },
     exit: (direction) => ({
       x: direction < 0 ? 200 : -200,
       opacity: 0,
@@ -53,47 +50,45 @@ export default function HomeHero() {
   }
 
   return (
-    <section className="relative bg-gradient-to-b from-slate-900 to-slate-800 text-white py-45 px-6 overflow-hidden">
-      <div className="max-w-5xl mx-auto text-center">
-
-
-        <div className="relative h-[180px] md:h-[200px] mb-8 mt-10">
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={slides[index].title}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
+    <section className="relative bg-gradient-to-b from-[var(--color-eh-power-black)] via-black to-[#1a1a1a] text-[var(--color-eh-white)] min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden px-6 pt-50">
+      <div className="max-w-5xl mx-auto text-center relative z-10 mt-10 mb-30">
+        <AnimatePresence mode="wait" custom={direction}>
+          <motion.div
+            key={slides[index].title}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center justify-center"
+          >
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="absolute inset-0 flex flex-col items-center justify-center"
+              className="text-4xl md:text-6xl font-extrabold mb-6 text-[var(--color-eh-power-red)]"
             >
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-4xl md:text-6xl font-extrabold mb-6"
-              >
-                {slides[index].title}
-              </motion.h2>
-              <p className="text-slate-300 max-w-lg mx-auto mb-6 text-base md:text-lg">
-                {slides[index].desc}
-              </p>
-              <Button
-                asChild
-                className="bg-cyan-500 hover:bg-cyan-600 text-white font-medium"
-              >
-                <a href={slides[index].link}>{slides[index].cta}</a>
-              </Button>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+              {slides[index].title}
+            </motion.h2>
 
+            <p className="text-gray-200 max-w-lg mx-auto mb-8 text-base md:text-lg">
+              {slides[index].desc}
+            </p>
+
+            <Button
+              asChild
+              className="bg-[var(--color-eh-power-red)] hover:bg-[#c82831] text-[var(--color-eh-white)] font-medium shadow-lg shadow-[var(--color-eh-power-red)]/30 transition-all"
+            >
+              <a href={slides[index].link}>{slides[index].cta}</a>
+            </Button>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Glowing cyan background */}
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-3xl" />
+      {/* Background glow (subtle yellow + red energy) */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--color-eh-power-red)]/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/3 w-[400px] h-[400px] bg-[var(--color-eh-power-yellow)]/10 rounded-full blur-3xl" />
     </section>
   )
 }
