@@ -45,7 +45,7 @@ export default function Applications() {
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               <Card className="p-6 bg-white border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all rounded-2xl h-full flex flex-col items-center text-center">
-                <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-cyan-50">
+                <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-eh-power-red">
                   {app.icon}
                 </div>
                 <CardContent className="p-0">
@@ -58,7 +58,7 @@ export default function Applications() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <span className="w-28 h-0.5 bg-gradient-to-r from-cyan-400 to-slate-300 rounded-full block" />
+          <span className="w-28 h-0.5 bg-gradient-to-r from-eh-power-red to-transparent rounded-full block" />
         </div>
       </div>
     </section>
