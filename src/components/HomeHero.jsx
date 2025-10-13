@@ -53,18 +53,11 @@ export default function HomeHero() {
   }
 
   return (
-    <section className="relative bg-gradient-to-b from-slate-900 to-slate-800 text-white py-32 px-6 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-slate-900 to-slate-800 text-white py-45 px-6 overflow-hidden">
       <div className="max-w-5xl mx-auto text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold mb-6"
-        >
-          Enthusiast Company LLC
-        </motion.h1>
 
-        <div className="relative h-[180px] md:h-[200px] mb-8">
+
+        <div className="relative h-[180px] md:h-[200px] mb-8 mt-10">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={slides[index].title}
@@ -76,9 +69,14 @@ export default function HomeHero() {
               transition={{ duration: 0.8 }}
               className="absolute inset-0 flex flex-col items-center justify-center"
             >
-              <h2 className="text-3xl md:text-5xl font-semibold text-cyan-400 mb-3">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl md:text-6xl font-extrabold mb-6"
+              >
                 {slides[index].title}
-              </h2>
+              </motion.h2>
               <p className="text-slate-300 max-w-lg mx-auto mb-6 text-base md:text-lg">
                 {slides[index].desc}
               </p>
@@ -92,10 +90,6 @@ export default function HomeHero() {
           </AnimatePresence>
         </div>
 
-        <p className="text-slate-400 max-w-2xl mx-auto">
-          Innovating across hydrogen, power, and product technologies — shaping
-          a sustainable future under one vision.
-        </p>
       </div>
 
       {/* Glowing cyan background */}
