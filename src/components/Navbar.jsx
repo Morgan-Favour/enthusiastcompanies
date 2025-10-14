@@ -24,7 +24,7 @@ const links = [
 ]
 
 const logoMap = {
-  "/": "/companies-logo.png",
+  "/": "/companies-logo-2.png",
   "/hydrogen": "/logo.png",
   "/power": "/power-logo.png",
   "/product": "/product-logo.png",
@@ -34,7 +34,7 @@ const Navbar = () => {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
-  const logoSrc = logoMap[pathname] || "/companies-logo.png"
+  const logoSrc = logoMap[pathname] || "/companies-logo-2.png"
 
   const isActive = (href) =>
     pathname === href
