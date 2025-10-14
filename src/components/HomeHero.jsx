@@ -53,18 +53,18 @@ export default function HomeHero() {
   }
 
   return (
-    <section className="relative bg-gradient-to-b from-slate-900 to-slate-800 text-white py-32 px-6 overflow-hidden">
-      <div className="max-w-5xl mx-auto text-center">
-        <motion.h1
+    <section className="h-screen relative bg-gradient-to-b from-slate-900 to-slate-800 text-white py-32 px-6 overflow-hidden">
+      <div className="max-w-5xl mx-auto text-center h-full w-full flex justify-center flex-col items-center ">
+        {/* <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl font-extrabold mb-6"
         >
           Enthusiast Company LLC
-        </motion.h1>
+        </motion.h1> */}
 
-        <div className="relative h-[180px] md:h-[200px] mb-8">
+        <div className="relative h-full mb-8 w-full">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={slides[index].title}
@@ -76,26 +76,26 @@ export default function HomeHero() {
               transition={{ duration: 0.8 }}
               className="absolute inset-0 flex flex-col items-center justify-center"
             >
-              <h2 className="text-3xl md:text-5xl font-semibold text-cyan-400 mb-3">
+              <h2 className="text-4xl md:text-6xl font-semibold text-cyan-400 mb-3">
                 {slides[index].title}
               </h2>
               <p className="text-slate-300 max-w-lg mx-auto mb-6 text-base md:text-lg">
                 {slides[index].desc}
               </p>
-              <Button
-                asChild
-                className="bg-cyan-500 hover:bg-cyan-600 text-white font-medium"
-              >
-                <a href={slides[index].link}>{slides[index].cta}</a>
+              <Button className='bg-transparent border border-eh-primary hover:bg-eh-primary text-eh-primary hover:text-white px-6 py-3 rounded-3xl font-semibold transition'>
+                <a href={slides[index].link} className="inline-flex items-center gap-2">
+                  {slides[index].cta}
+                </a>
               </Button>
+              
             </motion.div>
           </AnimatePresence>
         </div>
 
-        <p className="text-slate-400 max-w-2xl mx-auto">
+        {/* <p className="text-slate-400 max-w-2xl mx-auto">
           Innovating across hydrogen, power, and product technologies — shaping
           a sustainable future under one vision.
-        </p>
+        </p> */}
       </div>
 
       {/* Glowing cyan background */}

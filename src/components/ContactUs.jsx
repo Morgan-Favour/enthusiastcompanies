@@ -45,7 +45,7 @@ const ContactUs = () => {
   }
 
   return (
-    <section className="relative overflow-hidden pt-50">
+    <section className="relative overflow-hidden py-[100px]">
       {/* Soft cyan glow background */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
 

@@ -3,8 +3,22 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+const logoMap = {
+"/": "/companies-logo.png",
+"/hydrogen": "/logo.png",
+"/power": "/power-logo.png",
+"/product": "/product-logo.png",
+}
+
 
 const Footer = () => {
+  const pathname = usePathname()
+
+  const logoSrc = logoMap[pathname] || "/companies-logo.png"
+
+
   return (
     <motion.footer
       className="bg-[url('/image2.jpg')] bg-cover bg-center bg-no-repeat relative text-white px-6 md:px-20 overflow-hidden"
@@ -36,7 +50,7 @@ const Footer = () => {
               <Image
                 width={200}
                 height={100}
-                src="/companies-logo.png"
+                src={logoSrc}
                 alt="Logo"
                 className='mb-5'
                 priority

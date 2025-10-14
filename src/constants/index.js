@@ -270,3 +270,21 @@ export const features = [
       text: `Dr. Billings once again challenged Mr. Peck — this time, to create something entirely of his own vision. That moment became the turning point, leading to a new era of discovery that laid the foundation for Enthusiast Hydrogen and its groundbreaking technologies.`,
     },
   ]
+
+  export const productFeatures = [
+    {
+      icon: <Factory className="w-6 h-6 text-eh-white" aria-hidden />,
+      title: 'High Efficiency',
+      desc: 'Our Multi Disc Rotary™ Generator achieves exceptional efficiency in converting hydrogen to electricity, maximizing energy output while minimizing waste.',
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-eh-white" aria-hidden />,
+      title: 'Scalability',
+      desc: 'Designed for modular deployment, our systems can be scaled to meet the needs of various applications, from small-scale installations to large industrial operations.',
+    },
+    {
+      icon: <Recycle className="w-6 h-6 text-eh-white" aria-hidden />,
+      title: 'Sustainability',
+      desc: 'Our technology supports the global transition to clean energy, helping reduce carbon emissions and promote environmental stewardship.',
+    }
+  ]
