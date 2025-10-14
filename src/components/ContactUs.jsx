@@ -27,7 +27,7 @@ const formSchema = z.object({
   message: z.string().min(10, { message: 'Message must be at least 10 characters' }),
 })
 
-const ContactUs = () => {
+const ContactUs = ({ themeColor, btnColor, textColor }) => {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -46,12 +46,12 @@ const ContactUs = () => {
 
   return (
     <section className="relative overflow-hidden py-[100px]">
-      {/* Soft cyan glow background */}
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
+      {/* Soft glow background */}
+      <div className={`absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-${themeColor}/50 rounded-full blur-3xl pointer-events-none`} />
 
       <div className="relative z-10">
         <div className="mb-12 text-center space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight text-cyan-400">
+          <h1 className={`text-4xl font-bold tracking-tight text-${textColor}`}>
             Contact Us
           </h1>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto mt-4">
@@ -154,7 +154,7 @@ const ContactUs = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-cyan-500 hover:bg-cyan-400 text-white font-semibold"
+                  className={`w-full bg-${btnColor} border-${themeColor} hover:bg-${themeColor} transition-colors text-white font-semibold`}
                 >
                   Submit
                 </Button>

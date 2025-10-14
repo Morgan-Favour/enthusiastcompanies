@@ -17,8 +17,8 @@ export default function Home() {
       <HowItStartedSection />
       <HowItsGoingSection />
       <HomePartnershipSection />
-      <div className="px-10 md:px-20 bg-gradient-to-b from-slate-900 to-slate-800">
-        <ContactUs />
+      <div className="px-10 md:px-20 bg-gradient-to-b from-[var(--color-eh-power-black)] via-black to-[#1a1a1a]">
+        <ContactUs themeColor='eh-power-red' btnColor='eh-power-red' textColor='eh-white' />
       </div>
     </>
   );
