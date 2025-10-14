@@ -85,7 +85,7 @@ export default function PartnerSection() {
         </motion.div>
 
         <div className="mt-16 flex justify-center">
-          <span className="w-28 h-0.5 bg-gradient-to-r from-eh-power-red to-eh-power-yellow rounded-full block" />
+          <span className="w-28 h-0.5 bg-gradient-to-r from-eh-power-red to-eh-power-black rounded-full block" />
         </div>
       </div>
     </section>

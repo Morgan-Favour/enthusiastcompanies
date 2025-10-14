@@ -50,8 +50,17 @@ export default function HomeHero() {
   }
 
   return (
-    <section className="relative bg-gradient-to-b from-[var(--color-eh-power-black)] via-black to-[#1a1a1a] text-[var(--color-eh-white)] min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden px-6 pt-50">
-      <div className="max-w-5xl mx-auto text-center relative z-10 mt-10 mb-30">
+    <section
+      className="
+        relative 
+        bg-gradient-to-b from-eh-power-black via-black to-[#141414] 
+        text-white 
+        min-h-screen 
+        flex items-center justify-center 
+        overflow-x-hidden overflow-y-clip
+        px-6 pt-24 md:pt-28"
+    >
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={slides[index].title}
@@ -67,18 +76,18 @@ export default function HomeHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-extrabold mb-6 text-[var(--color-eh-power-red)]"
+              className="text-4xl md:text-6xl font-extrabold mb-6 text-eh-power-red drop-shadow-[0_0_15px_rgba(230,50,61,0.4)]"
             >
               {slides[index].title}
             </motion.h2>
 
-            <p className="text-gray-200 max-w-lg mx-auto mb-8 text-base md:text-lg">
+            <p className="text-slate-200 max-w-xl mx-auto mb-8 text-base md:text-lg leading-relaxed">
               {slides[index].desc}
             </p>
 
             <Button
               asChild
-              className="bg-[var(--color-eh-power-red)] hover:bg-[#c82831] text-[var(--color-eh-white)] font-medium shadow-lg shadow-[var(--color-eh-power-red)]/30 transition-all"
+              className="bg-eh-power-red hover:bg-[#c82831] text-white font-medium shadow-[0_0_20px_rgba(230,50,61,0.4)] hover:shadow-[0_0_35px_rgba(230,50,61,0.6)] transition-all rounded-full px-8 py-3 text-lg"
             >
               <a href={slides[index].link}>{slides[index].cta}</a>
             </Button>
@@ -86,9 +95,9 @@ export default function HomeHero() {
         </AnimatePresence>
       </div>
 
-      {/* Background glow (subtle yellow + red energy) */}
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--color-eh-power-red)]/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/3 w-[400px] h-[400px] bg-[var(--color-eh-power-yellow)]/10 rounded-full blur-3xl" />
+      {/* Glowing background accents */}
+      <div className="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-eh-power-red/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-100px] right-1/3 w-[300px] h-[300px] bg-eh-power-yellow/10 rounded-full blur-[100px] pointer-events-none" />
     </section>
   )
 }
