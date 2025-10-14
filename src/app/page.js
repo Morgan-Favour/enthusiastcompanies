@@ -11,13 +11,15 @@ import HomePartnershipSection from "@/components/HomePatnershipSection";
 export default function Home() {
   return (
     <>
+      <div className="overflow-hidden">
         <HomeHero />
-        <DivisionsSection />
         <HomeAboutSection />
+        <DivisionsSection />
         <InnovationSection />
         <HowItStartedSection />
         <HowItsGoingSection />
         <HomePartnershipSection />
+      </div>
     </>
   );
 }

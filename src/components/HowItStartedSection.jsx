@@ -47,7 +47,7 @@ export default function HowItStartedSection() {
           {/* Animated glowing energy line */}
           <motion.div
             style={{ height: lineHeight }}
-            className="absolute left-4 md:left-1/2 top-0 w-[2px] bg-gradient-to-b from-[var(--color-eh-power-red)] via-[var(--color-eh-power-yellow)] to-transparent transform md:-translate-x-1/2 rounded-full"
+            className="absolute left-4 md:left-1/2 top-0 w-[2px] bg-gradient-to-b from-[var(--color-eh-power-red)] via-[var(--color-eh-power-black)] to-transparent transform md:-translate-x-1/2 rounded-full"
           />
 
           <div className="space-y-20 relative z-10">
@@ -81,7 +81,7 @@ export default function HowItStartedSection() {
                   </div>
 
                   {/* Glowing energy node */}
-                  <div className="absolute left-4 md:left-1/2 w-5 h-5 bg-[var(--color-eh-power-red)] rounded-full shadow-[0_0_25px_8px_rgba(255,0,0,0.45)] animate-pulse transform md:-translate-x-1/2 border-2 border-[var(--color-eh-power-yellow)]" />
+                  <div className="absolute left-4 md:left-1/2 w-5 h-5 bg-[var(--color-eh-power-red)] rounded-full shadow-[0_0_25px_8px_rgba(255,0,0,0.45)] animate-pulse transform md:-translate-x-1/2 border-2 border-[var(--color-eh-power-black)]" />
                 </motion.div>
               )
             })}
