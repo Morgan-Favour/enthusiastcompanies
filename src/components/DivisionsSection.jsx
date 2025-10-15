@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { divisions } from "../constants/index.js"
+import Image from "next/image"
 
 export default function DivisionsSection() {
   return (
@@ -55,35 +56,38 @@ export default function DivisionsSection() {
                   transition-all duration-300
                   rounded-2xl p-8
                   flex flex-col items-center text-center
-                  h-full
+                  h-full justify-between
                 "
               >
-                <div className="mb-6 text-[var(--color-eh-power-yellow)] text-5xl">
-                  {d.icon}
+                <div className=" text-[var(--color-eh-power-yellow)] text-5xl">
+                  <Image src={d.logo} alt={`${d.name} Icon`} width={120} height={120} />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3 text-[var(--color-eh-white)]">
+                {/* <h3 className="text-xl font-semibold mb-3 text-[var(--color-eh-white)]">
                   {d.name}
-                </h3>
+                </h3> */}
 
-                <p className="text-sm text-gray-400 mb-8">
-                  {d.desc}
-                </p>
+                <div className="flex flex-col gap-6 items-center justify-end">
+                    <p className="text-sm text-gray-200 mb-8">
+                    {d.desc}
+                  </p>
 
-                <Button
-                  asChild
-                  className="
-                    bg-[var(--color-eh-power-red)]
-                    hover:bg-[#c82831]
-                    z-10
-                    text-[var(--color-eh-white)]
-                    font-medium
-                    transition-all
-                    shadow-md shadow-[var(--color-eh-power-red)]/30
-                  "
-                >
-                  <a href={d.link}>Learn More</a>
-                </Button>
+                  <Button
+                    asChild
+                    className="
+                      bg-[var(--color-eh-power-red)]
+                      hover:bg-[#c82831]
+                      z-10
+                      text-[var(--color-eh-white)]
+                      font-medium
+                      transition-all
+                      shadow-md shadow-[var(--color-eh-power-red)]/30
+                    "
+                  >
+                    <a href={d.link}>Learn More</a>
+                  </Button>
+                </div>
+                
               </Card>
             </motion.div>
           ))}
