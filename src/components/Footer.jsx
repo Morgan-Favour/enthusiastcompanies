@@ -9,7 +9,7 @@ const logoMap = {
 "/": "/companies-logo.png",
 "/hydrogen": "/logo-2.png",
 "/power": "/power-logo.png",
-"/product": "/product-logo.png",
+"/product": "/product-logo-2.png",
 }
 
 

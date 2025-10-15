@@ -39,7 +39,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6 text-[var(--color-eh-power-red)]"
           >
-            About Enthusiast Company LLC
+            About Enthusiast Companies LLC
           </motion.h2>
 
           <motion.p
@@ -84,7 +84,7 @@ export default function AboutSection() {
         >
           <Image
             src="/enthusiast-hq.png"
-            alt="Enthusiast Company Headquarters"
+            alt="Enthusiast Companies Headquarters"
             width={600}
             height={400}
             className="object-cover rounded-2xl"
