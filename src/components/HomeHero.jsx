@@ -77,7 +77,7 @@ export default function HomeHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-extrabold mb-6 text-eh-power-red drop-shadow-[0_0_15px_rgba(230,50,61,0.4)]"
+              className="text-4xl md:text-6xl font-extrabold mb-6 text-eh-white drop-shadow-[0_0_15px_rgba(230,50,61,0.4)]"
             >
              Unlocking Clean Energy from Below
             </motion.h2>
