@@ -222,19 +222,19 @@ export const features = [
     {
       name: 'Enthusiast Hydrogen',
       desc: 'Revolutionizing clean hydrogen energy systems through advanced Multi Disc Rotary™ generator technology.',
-      icon: <Atom className="w-8 h-8 text-eh-white" />,
+      logo: "/logo-2.png",
       link: '/hydrogen',
     },
     {
       name: 'Enthusiast Power',
       desc: 'Delivering innovative, sustainable power generation and storage solutions for global energy needs.',
-      icon: <Battery className="w-8 h-8 text-eh-white" />,
+      logo: "/power-logo.png",
       link: '/power',
     },
     {
       name: 'Enthusiast Products',
       desc: 'Creating next-generation smart and industrial products that integrate innovation with sustainability.',
-      icon: <Package className="w-8 h-8 text-eh-white" />,
+      logo: "/product-logo-2.png",
       link: '/product',
     },
   ]
