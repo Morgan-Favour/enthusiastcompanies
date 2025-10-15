@@ -45,7 +45,7 @@ const ContactUs = ({ themeColor, btnColor, textColor }) => {
   }
 
   return (
-    <section className="relative overflow-hidden py-[100px]">
+    <section className="relative overflow-hidden py-[100px] pt-20 md:pt-40">
       {/* Soft glow background */}
       <div className={`absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-${themeColor}/50 rounded-full blur-3xl pointer-events-none`} />
 
