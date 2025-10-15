@@ -235,7 +235,7 @@ export const features = [
       name: 'Enthusiast Products',
       desc: 'Creating next-generation smart and industrial products that integrate innovation with sustainability.',
       icon: <Package className="w-8 h-8 text-eh-white" />,
-      link: '/products',
+      link: '/product',
     },
   ]
 
@@ -272,19 +272,22 @@ export const features = [
   ]
 
   export const productFeatures = [
-    {
-      icon: <Factory className="w-6 h-6 text-eh-white" aria-hidden />,
-      title: 'High Efficiency',
-      desc: 'Our Multi Disc Rotary™ Generator achieves exceptional efficiency in converting hydrogen to electricity, maximizing energy output while minimizing waste.',
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-eh-white" aria-hidden />,
-      title: 'Scalability',
-      desc: 'Designed for modular deployment, our systems can be scaled to meet the needs of various applications, from small-scale installations to large industrial operations.',
-    },
-    {
-      icon: <Recycle className="w-6 h-6 text-eh-white" aria-hidden />,
-      title: 'Sustainability',
-      desc: 'Our technology supports the global transition to clean energy, helping reduce carbon emissions and promote environmental stewardship.',
-    }
-  ]
+  {
+    id: 'efficiency',
+    icon: <Factory className="w-6 h-6 text-eh-white" aria-hidden />,
+    title: 'High Efficiency',
+    desc: 'Our Multi Disc Rotary™ Generator achieves exceptional efficiency in converting hydrogen to electricity, maximizing energy output while minimizing waste.',
+  },
+  {
+    id: 'scalability',
+    icon: <Zap className="w-6 h-6 text-eh-white" aria-hidden />,
+    title: 'Scalability',
+    desc: 'Designed for modular deployment, our systems can be scaled to meet the needs of various applications, from small-scale installations to large industrial operations.',
+  },
+  {
+    id: 'sustainability',
+    icon: <Recycle className="w-6 h-6 text-eh-white" aria-hidden />,
+    title: 'Sustainability',
+    desc: 'Our technology supports the global transition to clean energy, helping reduce carbon emissions and promote environmental stewardship.',
+  }
+]

@@ -37,7 +37,7 @@ export default function DivisionsSection() {
         </motion.p>
 
         {/* Division Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 z-10">
           {divisions.map((d, i) => (
             <motion.div
               key={i}
@@ -75,6 +75,7 @@ export default function DivisionsSection() {
                   className="
                     bg-[var(--color-eh-power-red)]
                     hover:bg-[#c82831]
+                    z-10
                     text-[var(--color-eh-white)]
                     font-medium
                     transition-all
@@ -90,7 +91,7 @@ export default function DivisionsSection() {
       </div>
 
       {/* Subtle glowing background accent */}
-      <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--color-eh-power-red)]/20 rounded-full blur-3xl" />
+      <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--color-eh-power-red)]/20 rounded-full blur-3xl pointer-events-none" />
     </section>
   )
 }

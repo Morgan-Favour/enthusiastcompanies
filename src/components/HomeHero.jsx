@@ -29,13 +29,13 @@ export default function HomeHero() {
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(1)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDirection(1)
-      setIndex((i) => (i + 1) % slides.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setDirection(1)
+  //     setIndex((i) => (i + 1) % slides.length)
+  //   }, 5000)
+  //   return () => clearInterval(interval)
+  // }, [])
 
   const variants = {
     enter: (direction) => ({
@@ -51,26 +51,27 @@ export default function HomeHero() {
 
   return (
     <section
+      id="home-hero"
       className="
         relative 
         bg-gradient-to-b from-eh-power-black via-black to-[#141414] 
         text-white 
         min-h-screen 
-        flex items-center justify-center 
+        flex items-center justify-left 
         overflow-x-hidden overflow-y-clip
         px-6 pt-24 md:pt-28"
     >
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="max-w-4xl text-left relative z-10 pl-0 md:pl-10">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
-            key={slides[index].title}
+            // key={slides[index].title}
             custom={direction}
             variants={variants}
             initial="enter"
             animate="center"
             exit="exit"
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-start justify-start w-full md:w-[80%]"
           >
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -78,26 +79,26 @@ export default function HomeHero() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-extrabold mb-6 text-eh-power-red drop-shadow-[0_0_15px_rgba(230,50,61,0.4)]"
             >
-              {slides[index].title}
+             Unlocking Clean Energy from Below
             </motion.h2>
 
-            <p className="text-slate-200 max-w-xl mx-auto mb-8 text-base md:text-lg leading-relaxed">
-              {slides[index].desc}
+            <p className="text-slate-200 max-w-xl mb-8 text-base md:text-lg leading-relaxed">
+              We develop hydrogen, power, and product technologies to meet tomorrow’s demands
             </p>
 
             <Button
               asChild
-              className="bg-eh-power-red hover:bg-[#c82831] text-white font-medium shadow-[0_0_20px_rgba(230,50,61,0.4)] hover:shadow-[0_0_35px_rgba(230,50,61,0.6)] transition-all rounded-full px-8 py-3 text-lg"
+              className="bg-transparent border border-eh-power-red hover:bg-eh-power-red text-white text-lg p-6 rounded-3xl font-semibold transition-all hover:shadow-[0_0_20px_rgba(230,50,61,0.4)]"
             >
-              <a href={slides[index].link}>{slides[index].cta}</a>
+              <a href="#about">Learn More</a>
             </Button>
           </motion.div>
         </AnimatePresence>
       </div>
 
       {/* Glowing background accents */}
-      <div className="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-eh-power-red/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-100px] right-1/3 w-[300px] h-[300px] bg-eh-power-yellow/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[-50px] right-0  w-[400px] h-[400px] bg-eh-power-red/60 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[-100px] right-0 w-[350px] h-[350px] bg-eh-power-yellow/30 rounded-full blur-[100px] pointer-events-none" />
     </section>
   )
 }
