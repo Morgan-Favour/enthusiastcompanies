@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 const slides = [
   {
@@ -73,6 +74,13 @@ export default function HomeHero() {
             transition={{ duration: 0.8 }}
             className="flex flex-col items-start justify-start w-full md:w-[80%]"
           >
+            <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full mb-6">
+              <Image src="/companies-logo.png" width={260} height={250} />
+            </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
