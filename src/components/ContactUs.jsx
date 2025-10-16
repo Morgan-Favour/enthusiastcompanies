@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
+import emailjs from '@emailjs/browser'
 
 import {
   Form,
@@ -18,7 +19,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 
-// Validation schema
+// ✅ Validation schema
 const formSchema = z.object({
   firstName: z.string().min(2, { message: 'First name is required' }),
   lastName: z.string().min(2, { message: 'Last name is required' }),
@@ -39,15 +40,46 @@ const ContactUs = ({ themeColor, btnColor, textColor }) => {
     },
   })
 
-  function onSubmit(values) {
-    console.log('Form submitted:', values)
-    // later: send to API or backend
+  const [loading, setLoading] = React.useState(false)
+
+  // ✅ Get env variables
+
+  async function onSubmit(values) {
+    setLoading(true)
+    try {
+      const result = await emailjs.send(
+        "service_e2mjfwh",
+        "template_yzrgx7m",
+        {
+          firstName: values.firstName,
+          lastName: values.lastName,
+          email: values.email,
+          phone: values.phone,
+          message: values.message,
+        },
+        "DGytf_Q--V4vdtzhB"
+      )
+      if (result.status === 200) {
+        alert('✅ Message sent successfully!')
+        form.reset()
+      } else {
+        alert('❌ Failed to send message.')
+      }
+    } catch (error) {
+      console.error(error)
+      alert('⚠️ Something went wrong. Please try again later.')
+    } finally {
+      setLoading(false)
+    }
+
   }
 
   return (
     <section className="relative overflow-hidden py-[100px] pt-20 md:pt-40">
-      {/* Soft glow background */}
-      <div className={`absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-${themeColor}/50 rounded-full blur-3xl pointer-events-none`} />
+      {/* Glow background */}
+      <div
+        className={`absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-${themeColor}/50 rounded-full blur-3xl pointer-events-none`}
+      />
 
       <div className="relative z-10">
         <div className="mb-12 text-center space-y-4">
@@ -55,7 +87,7 @@ const ContactUs = ({ themeColor, btnColor, textColor }) => {
             Contact Us
           </h1>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto mt-4">
-            Get in touch with us for investments, collaborations, and hydrogen solutions.  
+            Get in touch with us for investments, collaborations, and hydrogen solutions.
             We’d love to hear from you.
           </p>
         </div>
@@ -154,9 +186,10 @@ const ContactUs = ({ themeColor, btnColor, textColor }) => {
                 <Button
                   type="submit"
                   size="lg"
-                  className={`w-full bg-${btnColor} border-${themeColor} hover:bg-${themeColor} transition-colors text-white font-semibold`}
+                  disabled={loading}
+                  className={`w-full bg-${btnColor} border-${themeColor} hover:bg-${themeColor} transition-colors text-white font-semibold disabled:opacity-50`}
                 >
-                  Submit
+                  {loading ? 'Sending...' : 'Submit'}
                 </Button>
               </form>
             </Form>
