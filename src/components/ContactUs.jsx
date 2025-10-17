@@ -40,12 +40,12 @@ const ContactUs = ({ themeColor, btnColor, textColor }) => {
     },
   })
 
-  const [loading, setLoading] = React.useState(false)
+  const [status, setStatus] = React.useState('idle') // 'idle' | 'loading' | 'success' | 'failed'
 
   // ✅ Get env variables
 
   async function onSubmit(values) {
-    setLoading(true)
+    setStatus('loading')
     try {
       const result = await emailjs.send(
         "service_e2mjfwh",
@@ -60,18 +60,20 @@ const ContactUs = ({ themeColor, btnColor, textColor }) => {
         "DGytf_Q--V4vdtzhB"
       )
       if (result.status === 200) {
-        alert('✅ Message sent successfully!')
+        // show success transiently
+        setStatus('success')
         form.reset()
+        // revert to idle after 3 seconds
+        setTimeout(() => setStatus('idle'), 3000)
       } else {
-        alert('❌ Failed to send message.')
+        setStatus('failed')
+        setTimeout(() => setStatus('idle'), 3000)
       }
     } catch (error) {
       console.error(error)
-      alert('⚠️ Something went wrong. Please try again later.')
-    } finally {
-      setLoading(false)
+      setStatus('failed')
+      setTimeout(() => setStatus('idle'), 3000)
     }
-
   }
 
   return (
@@ -186,10 +188,13 @@ const ContactUs = ({ themeColor, btnColor, textColor }) => {
                 <Button
                   type="submit"
                   size="lg"
-                  disabled={loading}
+                  disabled={status === 'loading'}
                   className={`w-full bg-${btnColor} border-${themeColor} hover:bg-${themeColor} transition-colors text-white font-semibold disabled:opacity-50`}
                 >
-                  {loading ? 'Sending...' : 'Submit'}
+                  {status === 'loading' && 'Sending...'}
+                  {status === 'success' && 'Success'}
+                  {status === 'failed' && 'Failed'}
+                  {status === 'idle' && 'Submit'}
                 </Button>
               </form>
             </Form>
