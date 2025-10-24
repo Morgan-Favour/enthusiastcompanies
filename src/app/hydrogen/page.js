@@ -13,7 +13,7 @@ export default function Hydrogen() {
     <div className="bg-gradient-to-b from-slate-900 to-slate-800 w-full overflow-hidden">
       <Hero />
       <AboutSection    />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <Stats />
       <Projects />
       <WhyUs />
